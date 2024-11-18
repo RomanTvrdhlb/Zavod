@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-section__box">
+
+          <div class="hero-section__image">
+            <svg viewBox="0 0 1730 882" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="clip">
+                  <path d="M5 307V823C5 850.614 27.3858 873 55 873H691.286C718.9 873 741.286 850.614 741.286 823V797C741.286 769.386 763.672 747 791.286 747H803.253C830.868 747 853.253 724.614 853.253 697V683.5C853.253 655.886 875.639 633.5 903.253 633.5H1160.9C1181.48 633.5 1198.15 616.823 1198.15 596.25C1198.15 575.677 1214.83 559 1235.4 559H1675C1702.61 559 1725 536.614 1725 509V404.245C1725 394.721 1717.28 387 1707.76 387C1698.23 387 1690.51 379.279 1690.51 369.755V188.245C1690.51 178.721 1698.23 171 1707.76 171C1717.28 171 1725 163.279 1725 153.755V51C1725 23.3858 1702.61 1 1675 1H956.738C929.124 1 906.738 23.3858 906.738 51V106.5C906.738 134.114 884.352 156.5 856.738 156.5H404.898C377.284 156.5 354.898 179.136 354.898 206.75C354.898 234.364 332.513 257 304.898 257H55C27.3858 257 5 279.386 5 307Z"/>
+                </clipPath>
+              </defs>
+              <!-- Картинка внутри SVG, которая обрезается через clipPath -->
+              <image xlink:href="img/index/hero-bg.png" width="100%" height="100%" clip-path="url(#clip)"/>
+            </svg>
+          </div>
+
+          <div class="hero-section__top">
+            <h1 class="hero-section__title">“nEW PRODUCTS”</h1>
+            <a href="#" class="main-link main-link--small">
+              <span class="main-link__arrow">
+                <svg width='66' height='58'>
+                  <use href='img/sprite/sprite.svg#arrow-r'></use>
+                </svg>
+              </span>
+              КАТАЛОГ
+            </a>
+          </div>
+
+          <div class="hero-section__bottom">
+            <p>ЄВРОПЕЙСЬКА<br> КОМПАНІЯ З ДИНАМІЧНИМ РОЗВИТКОМ, ЯКА ЗАДАЄ<br> ТРЕНДИ НА РИНКУ ПРОДУКТІВ ХАРЧУВАННЯ ТА НАПОЇВ
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="container">
+        <div class="info-section__box">
+          <h2 class="title">OUR PRODUCTS</h2>
+
+          <ul class="info-list">
+            <li class="info-list__item">
+              <div class="info-card">
+                <div class="info-card__top">
+                  <span class="info-card__title">BEER</span>
+                  <span class="info-card__icon">
+                    <svg width='27' height='75'>
+                      <use href='img/sprite/sprite.svg#my1'></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="info-card__wrapp">
+                  <span class="info-card__text">Українські 19 брендів</span>
+                  <span class="info-card__text">Світові 12 брендів</span>
+                </div>
+
+                <div class="info-card__labels">
+                  <span class="info-card__label">ZHASHKIVSKY KABAN™</span>
+                  <span class="info-card__label">HAISENBERG™</span>
+                  <span class="info-card__label">ZHASHKIVSKE™</span>
+                </div>
+              </div>
+            </li>
+            <li class="info-list__item">
+              <div class="info-card">
+                <div class="info-card__top">
+                  <span class="info-card__title">bar</span>
+                  <span class="info-card__icon">
+                    <svg width='24' height='75'>
+                      <use href='img/sprite/sprite.svg#my2'></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="info-card__wrapp">
+                  <span class="info-card__text">Українські 19 брендів</span>
+                  <span class="info-card__text">Світові 12 брендів</span>
+                </div>
+
+                <div class="info-card__labels">
+                  <span class="info-card__label">EAT ME™</span>
+                </div>
+              </div>
+            </li>
+            <li class="info-list__item">
+              <div class="info-card">
+                <div class="info-card__top">
+                  <span class="info-card__title">Alco-energy drink</span>
+                  <span class="info-card__icon">
+                    <svg width='32' height='75'>
+                      <use href='img/sprite/sprite.svg#my3'></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="info-card__wrapp">
+                  <span class="info-card__text">Українські 19 брендів</span>
+                  <span class="info-card__text">Світові 12 брендів</span>
+                </div>
+
+                <div class="info-card__labels">
+                  <span class="info-card__label">REVO™</span>
+                </div>
+              </div>
+            </li>
+            <li class="info-list__item">
+              <div class="info-card">
+                <div class="info-card__top">
+                  <span class="info-card__title">LOW-Alcohol cocKtail</span>
+                  <span class="info-card__icon">
+                    <svg width='24' height='75'>
+                      <use href='img/sprite/sprite.svg#my4'></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="info-card__wrapp">
+                  <span class="info-card__text">Українські 19 брендів</span>
+                  <span class="info-card__text">Світові 12 брендів</span>
+                </div>
+
+                <div class="info-card__labels">
+                  <span class="info-card__label">KINGS BRIDGE™</span>
+                  <span class="info-card__label">SHAKE™</span>
+                </div>
+              </div>
+            </li>
+            <li class="info-list__item">
+              <a href="#" class="main-link">
+                <span class="main-link__arrow">
+                  <svg width='66' height='58'>
+                    <use href='img/sprite/sprite.svg#arrow-r'></use>
+                  </svg>
+                </span>
+                КАТАЛОГ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="marque-section">
+      <div class='marque-slider'>
+        <div class='swiper-container'>
+          <ul class='swiper-wrapper'>
+            <li class='swiper-slide'>
+              <svg width='126' height='118'>
+                <use href='img/sprite/sprite.svg#shake'></use>
+              </svg>
+            </li>
+            <li class='swiper-slide'>
+              <svg width='294' height='118'>
+                <use href='img/sprite/sprite.svg#apps'></use>
+              </svg>
+            </li>
+            <li class='swiper-slide'>
+              <svg class="mode" width='129' height='131'>
+                <use href='img/sprite/sprite.svg#revo'></use>
+              </svg>
+            </li>
+            <li class='swiper-slide'>
+              <svg width='126' height='118'>
+                <use href='img/sprite/sprite.svg#shake'></use>
+              </svg>
+            </li>
+            <li class='swiper-slide'>
+              <svg width='294' height='118'>
+                <use href='img/sprite/sprite.svg#apps'></use>
+              </svg>
+            </li>
+            <li class='swiper-slide'>
+              <svg width='294' height='118'>
+                <use href='img/sprite/sprite.svg#apps'></use>
+              </svg>
+            </li>
+            <li class='swiper-slide'>
+              <svg class="mode" width='129' height='131'>
+                <use href='img/sprite/sprite.svg#revo'></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bestsellers-section">
+      <div class="container">
+        <div class="bestsellers-section__box">
+          <h2 class="title">BESTSELLERS</h2>
+
+          <div class='bestsellers-slider'>
+            <div class='swiper-container'>
+              <ul class='swiper-wrapper'>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/NS.webp'>
+                        <img width='142' height='327' src='img/index/NS.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">NON STOP™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Original</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <span class="bestsellers-card__icon">
+                          <svg width='30' height='80'>
+                            <use href='img/sprite/sprite.svg#my3'></use>
+                          </svg>
+                        </span>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/ZH.webp'>
+                        <img width='150' height='453' src='img/index/ZH.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">ZHASHKIVSKY KABAN™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Amber</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <span class="bestsellers-card__icon">
+                          <svg width='24' height='85'>
+                            <use href='img/sprite/sprite.svg#my4'></use>
+                          </svg>
+                        </span>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/Eat.webp'>
+                        <img width='246' height='333' src='img/index/Eat.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">EAT ME™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Cranberry and coffee</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <span class="bestsellers-card__icon">
+                          <svg width='26' height='81'>
+                            <use href='img/sprite/sprite.svg#my2'></use>
+                          </svg>
+                        </span>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/NS.webp'>
+                        <img width='142' height='327' src='img/index/NS.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">NON STOP™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Original</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <span class="bestsellers-card__icon">
+                          <svg width='30' height='80'>
+                            <use href='img/sprite/sprite.svg#my3'></use>
+                          </svg>
+                        </span>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                          <span class="bestsellers-card__value mode">70 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button class='swiper-button next'>
+              <svg width='35' height='31'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </button>
+            <button class='swiper-button prev'>
+              <svg width='35' height='31'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <div class="about-section__box">
+          <h2 class="title">ABOUT COMPANY</h2>
+
+          <div class="about-section__inner">
+            <span class="about-section__text">“NEW PRODUCTS” НАЛІЧУЄ 17 БРЕНДІВ НА ТЕРИТОРІЇ 22 КРАЇН СВІТУ</span>
+
+            <p class="about-section__info">Група компаній “New Products” - один із найбільших виробників напоїв і снеків
+              в Україні. Компанія працює вже понад 21 рік і входить до Реєстру найбільших платників податків країни.
+              <br><br>
+              Сьогодні Група компаній “Нові продукти” експортує свою продукцію до 23 країн світу. Зокрема до таких
+              країн, як-то: Польща, Чехія, Нідерланди, Італія, Румунія, Молдова, Грузія, Азербайджан, Індія та Ізраїль
+              тощо.
+            </p>
+          </div>
+
+          <a href="#" class="main-link main-link--small">
+            <span class="main-link__arrow">
+              <svg width='24' height='22'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </span>
+            ПРО НАС
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-section">
+      <div class="container">
+        <div class="more-section__box" data-clip>
+
+          <div class="editor" data-clip-item="false">
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+
+
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+          </div>
+          <button class="main-link main-link--bottom hidden-btn" data-clip-btn>
+            <span class="main-link__arrow">
+              <svg width='66' height='58'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </span>
+            РОЗГОРНУТИ
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

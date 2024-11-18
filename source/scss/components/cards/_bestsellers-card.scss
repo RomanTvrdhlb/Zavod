@@ -1,0 +1,155 @@
+.bestsellers-card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: clamp(10px, 1.1628vw, 20px);
+
+    @media (max-width: (600px)) {
+       width: 220px;
+    }
+
+    &__image{
+        position: relative;
+        width: 100%;
+        height: clamp(137px, 17.1512vw, 295px);
+        border: 2px solid var(--br-a);
+        border-radius: 15px;
+        display: flex;
+        padding: 0 clamp(8px, 1.1628vw, 20px) clamp(8px, 1.1628vw, 20px);
+        align-items: flex-end;
+        justify-content: center;
+
+        img,picture{
+            max-height: clamp(189px, 26.3372vw, 453px);
+            min-height: clamp(189px, 19.0116vw, 327px);
+            height: auto;
+            width: auto;
+        }
+
+        margin-top: clamp(60px, 10.3488vw, 178px);
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: clamp(10px, 1.1628vw, 20px);
+        height: 100%;
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: clamp(10px, 1.1628vw, 20px);
+        position: relative;
+        z-index: 1;
+        height: 100%;
+    }
+
+    &__icon{
+        position: absolute;
+        right: clamp(10px, 1.1628vw, 20px);
+        top: 0;
+        z-index: 2;
+        display: flex;
+        width: fit-content;
+        height: clamp(41px, 4.6512vw, 80px);
+
+        svg,img{
+            width: auto;
+            height: clamp(41px, 4.6512vw, 80px);
+        }
+    }
+
+
+    &__price{
+        display: flex;
+        gap: clamp(15px, 1.1628vw, 20px);
+        flex-grow: 1;
+    }
+
+    &__value{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(25px, 2.0349vw, 35px);
+        line-height: 74%;
+        color: var(--cl-b);
+        height: fit-content;
+
+        b{
+            font-weight: 500;
+            font-size: clamp(20px, 1.7442vw, 30px);
+        }
+
+        @include tablet{
+            line-height: 104%;
+        }
+
+        &.mode{
+            font-size: clamp(20px, 1.4535vw, 25px);
+            line-height: 104%;
+            color: rgba(255, 255, 255, 0.5);
+            position: relative;
+            z-index: 1;
+
+            b{
+                font-size: clamp(20px, 1.4535vw, 25px);
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                background: var(--bg-c);
+                width: 100%;
+                height: 1px;
+                left: 0;
+                transform: translateY(-50%);
+                top: 60%;
+                z-index: 2;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(19px, 1.3953vw, 24px);
+        line-height: 108%;
+        color: var(--cl-a);
+
+        @include tablet{
+            line-height: 137%;
+        }
+    }
+
+    &__pretitle{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(23px, 1.3953vw, 24px);
+        line-height: 108%;
+        color: var(--cl-c);
+        padding-right: 20%;
+        
+
+        @include tablet{
+            line-height: 113%;
+        }
+    }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(20px, 1.3953vw, 24px);
+        line-height: 108%;
+        color: var(--cl-c);
+
+        @include tablet{
+            line-height: 130%;
+        }
+    }
+}

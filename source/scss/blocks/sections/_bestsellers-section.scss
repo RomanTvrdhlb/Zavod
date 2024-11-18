@@ -1,0 +1,10 @@
+.bestsellers-section{
+    margin-bottom: clamp(100px, 9.8837vw, 170px);
+    overflow: hidden;
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 2.907vw, 50px);
+    }
+}

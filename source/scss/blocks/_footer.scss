@@ -1,0 +1,51 @@
+.footer {
+  padding: clamp(35px, 6.9444vw, 100px) 0 clamp(30px, 6.9444vw, 100px);
+  background: var(--bg-e);
+  position: relative;
+  z-index: 1;
+
+  &__box {
+    display: grid;
+    position: relative;
+    align-items: center;
+    grid-gap: clamp(24px, 2.7778vw, 40px);
+
+    @include for-desktop{
+      grid-template-columns: 1fr 1.3fr 1fr;
+    }
+
+    @include desktop{
+      @include for-tablet{
+        grid-template-columns: .65fr 1.3fr auto;
+      }
+    }
+ 
+    @include tablet{
+      @include for-small-tablet{
+        grid-template-columns: auto 1fr auto;
+      }
+    }
+  
+    @include small-tablet{
+      grid-template-columns: 100%;
+      justify-items: center;
+      grid-gap: 35px;
+     
+    }
+
+    @media (max-width: (380px)) {
+      justify-items: start;
+    }
+  }
+
+  .socials{
+    @include for-small-tablet{
+      justify-self: end;
+    }
+  }
+
+  @include small-tablet{
+    padding: 35px 0 30px;
+  }
+
+}

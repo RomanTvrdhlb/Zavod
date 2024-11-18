@@ -1,0 +1,80 @@
+.hero-section {
+  margin-bottom: clamp(50px, 8.7209vw, 150px);
+  padding-top: clamp(30px, 5.814vw, 100px);
+
+  &__image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+      opacity: 83%;
+      // clip-path: path("M5 307V823C5 850.614 27.3858 873 55 873H691.286C718.9 873 741.286 850.614 741.286 823V797C741.286 769.386 763.672 747 791.286 747H803.253C830.868 747 853.253 724.614 853.253 697V683.5C853.253 655.886 875.639 633.5 903.253 633.5H1160.9C1181.48 633.5 1198.15 616.823 1198.15 596.25C1198.15 575.677 1214.83 559 1235.4 559H1675C1702.61 559 1725 536.614 1725 509V404.245C1725 394.721 1717.28 387 1707.76 387C1698.23 387 1690.51 379.279 1690.51 369.755V188.245C1690.51 178.721 1698.23 171 1707.76 171C1717.28 171 1725 163.279 1725 153.755V51C1725 23.3858 1702.61 1 1675 1H956.738C929.124 1 906.738 23.3858 906.738 51V106.5C906.738 134.114 884.352 156.5 856.738 156.5H404.898C377.284 156.5 354.898 179.136 354.898 206.75C354.898 234.364 332.513 257 304.898 257H55C27.3858 257 5 279.386 5 307Z");
+    }
+  }
+
+  &__box {
+    position: relative;
+    z-index: 2;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: Min(1.4535vw, 25px);
+        height: Min(10.1744vw, 175px);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='175' fill='none'%3E%3Ccircle cx='12.5' cy='12.5' r='12.5' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='62.5' r='12.5' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='112.5' r='12.5' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='162.5' r='12.5' fill='%23fff'/%3E%3C/svg%3E");
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 21.5%;
+        right: 5px;
+        z-index: 3;
+
+        @media (max-width: (1800px)) {
+            top: 21%;
+          }
+    }
+  }
+
+  &__title {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: Min(9.7093vw, 167px);
+    color: var(--cl-a);
+    text-transform: uppercase;
+  }
+
+  &__top {
+    max-width: Min(51.4535vw, 885px);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .main-link {
+      font-size: clamp(30px, 3.1977vw, 55px);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    max-width: Min(57.8488vw, 995px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: Min(3.4884vw, 60px);
+      text-align: right;
+      color: var(--cl-c);
+    }
+  }
+}
