@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="catalog-section">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item home">
+            <a href="/">
+              <p>Головна</p>
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#home'></use>
+              </svg>
+            </a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page"><p>Каталог</p></li>
+        </ul>
+
+        <div class="catalog-section__wrapp">
+          <h2 class="title">КАТАЛОГ</h2>
+
+          <div class="catalog-section__head">
+            Категорії
+          </div>
+
+          <div class="catalog-section__products">
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <div class="catalog-card__label">LIMITED EDITION</div>
+
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/Apps-Classic.webp'>
+                  <img width='142' height='327' src='img/catalog/Apps-Classic.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">APPS™</span>
+
+                <span class="catalog-card__series">Класік</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>5,5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                  <span class="catalog-card__price-sale">70 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/apps.webp'>
+                  <img width='142' height='327' src='img/catalog/apps.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">APPS™</span>
+
+                <span class="catalog-card__series">Cherry</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>5,5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/shake.webp'>
+                  <img width='142' height='327' src='img/catalog/shake.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">SHAKE™</span>
+
+                <span class="catalog-card__series">Bitter Lemon</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>0</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/revo.webp'>
+                  <img width='142' height='327' src='img/catalog/revo.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">Revo™</span>
+
+                <span class="catalog-card__series">Класік</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>8.5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/Apps-Classic.webp'>
+                  <img width='142' height='327' src='img/catalog/Apps-Classic.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">APPS™</span>
+
+                <span class="catalog-card__series">Класік</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>5,5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                  <span class="catalog-card__price-sale">70 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <div class="catalog-card__label">LIMITED EDITION</div>
+
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/apps.webp'>
+                  <img width='142' height='327' src='img/catalog/apps.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">APPS™</span>
+
+                <span class="catalog-card__series">Cherry</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>5,5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/shake.webp'>
+                  <img width='142' height='327' src='img/catalog/shake.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">SHAKE™</span>
+
+                <span class="catalog-card__series">Bitter Lemon</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>0</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <div class="catalog-card__label">НОВИНКА</div>
+
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/revo.webp'>
+                  <img width='142' height='327' src='img/catalog/revo.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">Revo™</span>
+
+                <span class="catalog-card__series">Класік</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>8.5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <div class="catalog-card__label">SALE</div>
+
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/Apps-Classic.webp'>
+                  <img width='142' height='327' src='img/catalog/Apps-Classic.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">APPS™</span>
+
+                <span class="catalog-card__series">Класік</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>5,5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                  <span class="catalog-card__price-sale">70 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/apps.webp'>
+                  <img width='142' height='327' src='img/catalog/apps.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">APPS™</span>
+
+                <span class="catalog-card__series">Cherry</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>5,5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <div class="catalog-card__label">ТОП</div>
+
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/shake.webp'>
+                  <img width='142' height='327' src='img/catalog/shake.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">SHAKE™</span>
+
+                <span class="catalog-card__series">Bitter Lemon</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>0</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+
+            <div class="catalog-card">
+              <div class="catalog-card__image">
+                <picture>
+                  <source type='image/webp' srcset='img/catalog/revo.webp'>
+                  <img width='142' height='327' src='img/catalog/revo.png' alt='image'>
+                </picture>
+              </div>
+
+              <div class="catalog-card__info">
+                <span class="catalog-card__title">Revo™</span>
+
+                <span class="catalog-card__series">Класік</span>
+
+                <div class="catalog-card__details">
+                  <span class="catalog-card__text">Пляшка: <span>0,5 л</span></span>
+                  <span class="catalog-card__text">Вміст алкоголю: <span>8.5</span> %</span>
+                </div>
+
+                <div class="catalog-card__price">
+                  <span class="catalog-card__price-current">50 ₴</span>
+                </div>
+              </div>
+
+              <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <a class="pagination__nav prev" href="#">
+              <svg width='35' height='33'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </a>
+            <ul class="pagination__list">
+              <li class="pagination__list-item">
+                <a class="pagination__list-link active" href="#">1</a>
+              </li>
+              <li class="pagination__list-item">
+                <a class="pagination__list-link" href="#">2</a>
+              </li>
+              <li class="pagination__list-item">
+                <a class="pagination__list-link" href="#">3</a>
+              </li>
+            </ul>
+            <a class="pagination__nav next" href="#">
+              <svg width='35' height='33'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="more-section">
+      <div class="container">
+        <div class="more-section__box" data-clip>
+
+          <div class="editor" data-clip-item="false">
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+
+
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+            <p>Історія успіху компанії - це історія розуміння бажань споживачів. Ми ретельно вивчаємо їхні очікування і
+              вподобання та відстежуємо світові тенденції, щоб створювати продукцію, яку обирають усе більше людей
+              з різних країн світу</p>
+          </div>
+          <button class="main-link main-link--bottom hidden-btn" data-clip-btn>
+            <span class="main-link__arrow">
+              <svg width='66' height='58'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </span>
+            РОЗГОРНУТИ
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

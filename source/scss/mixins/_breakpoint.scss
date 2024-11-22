@@ -19,26 +19,25 @@
 }
 
 @mixin for-tablet {
-  @media (min-width: (1024px)) {
+  @media (min-width: (1025px)) {
     @content;
   }
 }
 
 @mixin for-small-tablet {
-  @media (min-width: (768px)) {
+  @media (min-width: (769px)) {
     @content;
   }
 }
 
-
 @mixin for-mobile {
-  @media (min-width: (576px)) {
+  @media (min-width: (577px)) {
     @content;
   }
 }
 
 @mixin for-ios {
-  @media (min-width: (425px)) {
+  @media (min-width: (426px)) {
     @content;
   }
 }

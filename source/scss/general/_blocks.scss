@@ -3,9 +3,23 @@
 @import "../blocks/modal.scss";
 @import "../blocks/footer.scss";
 
+// Main page
 @import "../blocks/sections/info-section.scss";
 @import "../blocks/sections/more-section.scss";
 @import "../blocks/sections/marque-section.scss";
 @import "../blocks/sections/about-section.scss";
 @import "../blocks/sections/hero-section.scss";
 @import "../blocks/sections/bestsellers-section.scss";
+@import "../blocks/sections/articles-section.scss";
+
+// Catalog page
+@import "../blocks/sections/catalog-section.scss";
+
+// Thank You page
+@import "../blocks/sections/thanks-section.scss";
+
+// Blog Page
+@import "../blocks/sections/blog-section.scss";
+
+// Sample pages section
+@import "../blocks/sections/block-section.scss";

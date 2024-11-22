@@ -1,0 +1,152 @@
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: clamp(10px, 1.1628vw, 20px);
+
+  &__image{
+    position: relative;
+    padding: 0 clamp(8px, 1.1628vw, 20px) clamp(8px, 1.1628vw, 20px);
+    margin-top: clamp(60px, 10.3488vw, 178px);
+    height: clamp(137px, 17.1512vw, 295px);
+    width: 100%;
+    background-color: var(--bg-k);
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    height: 380px;
+    height: clamp(137px, 19.792vw, 380px);
+    margin-top: 90px;
+    margin-top: clamp(60px, 4.688vw, 90px);
+
+    img,picture{
+      max-height: clamp(189px, 26.3372vw, 453px);
+      min-height: clamp(189px, 19.0116vw, 327px);
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: clamp(10px, 1.953vw, 20px);
+    padding: 10px;
+    background-color: var(--bg-l);
+    border-radius: 10px;
+    font-size: clamp(21px, 2.344vw, 24px);
+    line-height: 100%;
+    font-weight: 500;
+    color: var(--cl-m);
+
+    @include for-mobile{
+      top: clamp(10px, 1.953vw, 20px);
+    }
+
+    @include mobile{
+      bottom: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // height: 100%;
+  }
+
+  &__title{
+    font-family: var(--font-family);
+    font-size: 24px;
+    line-height: 108%;
+    font-weight: 500;
+    color: var(--cl-a);
+
+    @include tablet{
+      line-height: 137%;
+    }
+  }
+
+  &__series{
+    font-family: var(--font-family);
+    font-size: 24px;
+    line-height: 108%;
+    font-weight: 500;
+    color: var(--cl-c);
+
+    @include tablet{
+        line-height: 113%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__text{
+    font-family: var(--font-family);
+    font-size: clamp(20px, 1.3953vw, 24px);
+    line-height: 112%;
+    font-weight: 400;
+    color: var(--cl-c);
+
+    span {
+      font-weight: 500;
+    }
+
+    @include tablet{
+      line-height: 130%;
+    }
+  }
+
+  &__price{
+    display: flex;
+    gap: clamp(15px, 1.1628vw, 20px);
+
+    &-current {
+      font-family: var(--font-family);
+      font-size: 35px;
+      line-height: 74%;
+      font-weight: 500;
+      color: var(--cl-b);
+      height: fit-content;
+
+      b {
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      @include tablet{
+          line-height: 104%;
+      }
+    }
+
+    &-sale {
+      font-size: 25px;
+      line-height: 100%;
+      color: rgba(255, 255, 255, 0.5);
+      position: relative;
+      z-index: 1;
+
+      b{
+        font-size: 25px;
+      }
+
+      &::before{
+          position: absolute;
+          content: '';
+          background: var(--bg-c);
+          width: 100%;
+          height: 1px;
+          left: 0;
+          transform: translateY(-50%);
+          top: 50%;
+          z-index: 2;
+          pointer-events: none;
+      }
+    }
+  }
+}

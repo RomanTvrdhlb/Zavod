@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="block-section">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item home">
+            <a href="/">
+              <p>Головна</p>
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#home'></use>
+              </svg>
+            </a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page"><p>About us</p></li>
+        </ul>
+
+        <div class="block-section__wrapp">
+          <h1 class="block-section__title">"NEW PRODUCTS" — A EUROPEAN COMPANY WITH DYNAMIC DEVELOPMENT THAT SETS TRENDS IN THE FOOD AND BEVERAGE MARKET.</h1>
+
+          <div class="block-section__text">
+            <p><b>New Products Group</b> is one of the biggest producers of beverages and snacks in Ukraine. The Company has been operating for over 21 years and is included in the Register of the largest taxpayers in the country.
+            Today, New Products Group exports its products to 23 countries, including Poland, the Czech Republic, the Netherlands, Italy, Romania, Moldova, Georgia, Azerbaijan, India, Israel and others.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

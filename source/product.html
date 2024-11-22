@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body class="single-product">
+  @include('partials/header.html')
+
+  <main>
+    <div class="product-section">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item home">
+            <a href="/">
+              <p>Головна</p>
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#home'></use>
+              </svg>
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="/catalog.html">
+              <p>Каталог</p>
+            </a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page"><p>APPS КЛАСИЧНИй СОЛОДКИЙ 0.5</p></li>
+        </ul>
+
+        <div class="product-section__wrapp">
+          product
+        </div>
+      </div>
+    </div>
+
+    <section class="bestsellers-section">
+      <div class="container">
+        <div class="bestsellers-section__box">
+          <h2 class="title">BESTSELLERS</h2>
+
+          <div class='bestsellers-slider'>
+            <div class='swiper-container'>
+              <ul class='swiper-wrapper'>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/NS.webp'>
+                        <img width='142' height='327' src='img/index/NS.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">NON STOP™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Original</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/ZH.webp'>
+                        <img width='150' height='453' src='img/index/ZH.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">ZHASHKIVSKY KABAN™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Amber</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/Eat.webp'>
+                        <img width='246' height='333' src='img/index/Eat.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">EAT ME™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Cranberry and coffee</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+                <li class='swiper-slide'>
+                  <div class="bestsellers-card">
+                    <div class="bestsellers-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/NS.webp'>
+                        <img width='142' height='327' src='img/index/NS.png' alt='image'>
+                      </picture>
+                    </div>
+
+                    <div class="bestsellers-card__box">
+                      <span class="bestsellers-card__title">NON STOP™</span>
+
+                      <div class="bestsellers-card__inner">
+                        <span class="bestsellers-card__pretitle">Original</span>
+                        <div class="bestsellers-card__wrapp">
+                          <span class="bestsellers-card__text">Пляшка: 0,5 L</span>
+                          <span class="bestsellers-card__text">Вміст алкоголю: 5%</span>
+                        </div>
+
+                        <div class="bestsellers-card__price">
+                          <span class="bestsellers-card__value">50 ₴</span>
+                          <span class="bestsellers-card__value mode">70 ₴</span>
+                        </div>
+                      </div>
+
+                      <button class="white-btn">ДОДАТИ ДО КОШИКА</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button class='swiper-button next'>
+              <svg width='35' height='31'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </button>
+            <button class='swiper-button prev'>
+              <svg width='35' height='31'>
+                <use href='img/sprite/sprite.svg#arrow-r'></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

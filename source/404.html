@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="error-section">
+      <div class="container">
+        <div class="error-section__wrapp">
+          <div class="error-section__image">
+
+          </div>
+
+          <div class="error-section__info">
+            <div class="error-section__text">
+              <p>Щось пішло не так...</p>
+              <p>Давай повернемось на головну?</p>
+            </div>
+            <a href="/">НА ГОЛОВНУ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,25 @@
+.articles-section{
+  margin-bottom: clamp(50px, 8.7209vw, 150px);
+
+  &__box{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(30px, 2.907vw, 50px);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    // @include mobile {
+    //   grid-template-columns: 100%;
+    // }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
