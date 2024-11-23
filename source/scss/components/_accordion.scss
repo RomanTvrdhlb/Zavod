@@ -2,112 +2,121 @@
   display: flex;
   flex-direction: column;
 
-  &__item{
-      display: flex;
-      flex-direction: column;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
 
-      @include for-tablet{
-          padding: clamp(20px, 2.0833vw, 30px) clamp(30px, 2.7778vw, 40px) clamp(20px, 2.0833vw, 30px) clamp(30px, 4.1667vw, 60px);
-      }
+    @include for-mobile {
+      padding: 20px clamp(10px, 1.953vw, 20px);
+    }
 
-      @include tablet{
-          padding: clamp(16px, 2.0833vw, 30px) clamp(16px, 2.7778vw, 40px)
-      }
+    @include mobile {
+      padding: 20px 0;
+    }
 
-      &:not(:last-child){
-          border-bottom: 1px solid var(--br-a);
-      }
+    &:not(:last-child){
+      border-bottom: 1px solid var(--br-b);
+    }
 
-      &.active{
-          .accordion__btn-icon{
-              transform: rotate(45deg)
-          }
+    &.active{
+      .accordion__btn-icon{
+        transform: rotate(45deg)
       }
+    }
+
+    &:hover {
+      background-color: var(--bg-d);
+
+      .accordion__btn p {
+        font-weight: 500;
+      }
+    }
   }
 
-  .editor{
-      padding-top: clamp(16px, 1.3889vw, 20px);
+  &__text {
+    padding-top: clamp(16px, 1.3889vw, 20px);
+
+    @include for-tablet {
+      padding-right: 100px;
+    }
   }
 
   &__btn{
-      width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(10px, 1.953vw, 20px);
+    justify-content: space-between;
+    transition: all .3s;
+
+    p {
+      font-family: var(--font-family);
+      font-size: clamp(20px, 2.0349vw, 35px);
+      line-height: 106%;
+      font-weight: 400;
+      color: var(--cl-m);
+      text-align: start;
+      text-transform: uppercase;
+
+      @include for-tablet {
+        max-width: 850px;
+      }
+    }
+
+    &-icon{
       display: flex;
       align-items: center;
-      grid-gap: 20px;
-      justify-content: space-between;
-      transition: all .3s;
-      font-family: var(--second-family);
-      font-weight: 700;
-      font-size: clamp(18px, 2.0139vw, 29px);
-      line-height: 102%;
-      color: var(--cl-d);
-      text-align: start;
+      justify-content: center;
+      width: clamp(20px, 4.395vw, 45px);
+      height: clamp(20px, 4.395vw, 45px);
+      position: relative;
+      z-index: 3;
+      align-self: flex-start;
+      margin-top: clamp(1px, .2778vw, 4px);
+      flex-shrink: 0;
+      transition: all .4s;
 
-      svg,img{
-          width: 24px;
-          height: 24px;
-          transition: all .3s;
+      &::before{
+        transition: all .3s;
+        content: '';
+        width: 100%;
+        height: clamp(2px, 0.488vw, 5px);
+        background: var(--cl-m);
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
       }
 
-      &:hover{
-          color: var(--cl-g);
+      &::after{
+        content: '';
+        height: 100%;
+        width: clamp(2px, 0.488vw, 5px);
+        background: var(--cl-m);
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        transition: all .3s;
       }
-
-
-
-      &-icon{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: clamp(18px, 1.5278vw, 22px);
-          height: clamp(18px, 1.5278vw, 22px);
-          position: relative;
-          z-index: 3;
-          align-self: flex-start;
-          margin-top: clamp(1px, .2778vw, 4px);
-          flex-shrink: 0;
-          transition: all .4s;
-
-          &::before{
-              transition: all .3s;
-              content: '';
-              width: 100%;
-              height: 3px;
-              background: var(--cl-d);
-              border-radius: 10px;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              position: absolute;
-          }
-
-          &::after{
-              content: '';
-              height: 100%;
-              width: 3px;
-              background: var(--cl-d);
-              border-radius: 10px;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              position: absolute;
-              transition: all .3s;
-          }
-      }
+    }
   }
 
 
   &[data-always-open]{
-      .accordion{
+    .accordion{
 
-          &__btn{
-              color: var(--cl-d) !important;
-              pointer-events: none;
-          }
-
-          &__btn-icon{
-              display: none;
-          }
+      &__btn{
+        // color: var(--cl-d) !important;
+        pointer-events: none;
       }
+
+      &__btn-icon{
+        display: none;
+      }
+    }
   }
 }
