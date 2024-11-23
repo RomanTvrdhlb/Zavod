@@ -5,8 +5,9 @@
   &__image {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: clamp(300px, 50.6977vw, 872px);
     position: relative;
+    margin: 10px 0 0;
 
     img,
     picture {
@@ -21,60 +22,101 @@
     position: relative;
     z-index: 2;
 
-    &::before{
-        position: absolute;
-        content: '';
-        width: Min(1.4535vw, 25px);
-        height: Min(10.1744vw, 175px);
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='175' fill='none'%3E%3Ccircle cx='12.5' cy='12.5' r='12.5' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='62.5' r='12.5' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='112.5' r='12.5' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='162.5' r='12.5' fill='%23fff'/%3E%3C/svg%3E");
-        background-position: top center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        top: 21.5%;
-        right: 5px;
-        z-index: 3;
-
-        @media (max-width: (1800px)) {
-            top: 21%;
-          }
+    @include small-tablet{
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
     }
   }
 
   &__title {
-    font-family: var(--third-family);
+    font-family: var(--second-family);
     font-weight: 700;
-    font-size: Min(9.7093vw, 167px);
     color: var(--cl-a);
     text-transform: uppercase;
+    line-height: 100%;
+
+    @include for-small-tablet{
+      font-size: Min(8.698vw, 167px);
+    }
+
+    @include small-tablet{
+      font-size: clamp(64px, 9.7093vw, 167px);
+    }
   }
 
   &__top {
-    max-width: Min(51.4535vw, 885px);
     display: flex;
+    gap: 5px;
     flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
 
     .main-link {
-      font-size: clamp(30px, 3.1977vw, 55px);
+      @include for-small-tablet{
+        font-size: Min(2.865vw, 55px);
+      }
+    }
+
+    @media (max-width: (1900px)) {
+      margin-top: 15px;
+    }
+
+    @include for-small-tablet{
+      max-width: Min(51.4535vw, 885px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -10px;
+    }
+
+    @include small-tablet{
+      order: -1;
     }
   }
 
   &__bottom {
     display: flex;
     flex-direction: column;
-    max-width: Min(57.8488vw, 995px);
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    
     
     p {
       font-family: var(--font-family);
       font-weight: 400;
-      font-size: Min(3.4884vw, 60px);
-      text-align: right;
+      
       color: var(--cl-c);
+      line-height: 100%;
+
+      @include for-small-tablet{
+        font-size: Min(3.125vw, 60px);
+        text-align: right;
+      }
+
+      @include small-tablet{
+        font-size: clamp(25px, 3.4884vw, 60px);
+      }
+    }
+
+    @media (min-width: (1791px)) {
+      bottom: -15px;
+    }
+
+    @media (max-width: (1790px)) {
+      @include for-small-tablet{
+        bottom: 1.5%;
+      }
+    }
+
+    @include for-small-tablet{
+      max-width: Min(57.8488vw, 995px);
+      position: absolute;
+      right: 0;
+    }
+
+    @include small-tablet{
+      margin-top: 6px;
+
+      br{
+        display: none;
+      }
     }
   }
 }

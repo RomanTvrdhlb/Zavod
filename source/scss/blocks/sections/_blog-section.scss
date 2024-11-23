@@ -7,6 +7,32 @@
     gap: 50px;
   }
 
+  &__posts{
+    display: grid;
+    grid-gap: 20px;
+
+    @include for-small-tablet{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet{
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__post{
+    @include for-small-tablet{
+      &.big{
+        grid-column: 2;
+        grid-row: span 2;
+      }
+  
+      &.mode{
+        grid-column: 1/-1;
+      }
+    }
+  }
+
   &__tags {
     width: fit-content;
     padding: 20px;

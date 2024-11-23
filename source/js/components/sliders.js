@@ -1,13 +1,15 @@
-import Swiper from "../vendor/swiper.js";
+import Swiper from "swiper";
 import vars from "../_vars.js";
+import { Navigation, Pagination, EffectCards, Autoplay, EffectFade } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const { marqueSliders, bestSliders } = vars;
+  const { marqueSliders, bestSliders, articlesSlider, heroSlider} = vars;
 
   marqueSliders && marqueSliders.forEach(function (slider) {
     const container = slider.querySelector(".swiper-container");
 
     const mainSwiper = new Swiper(container, {
+      modules: [Autoplay],
       spaceBetween: 75,
       slidesPerView: 'auto',
       loop: true,
@@ -46,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = slider.querySelector(".swiper-button.prev");
 
     const bestSwiper = new Swiper(container, {
+      modules: [Navigation, Pagination],
       spaceBetween: 20,
       slidesPerView: 4,
       speed: 1800,
@@ -76,4 +79,78 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  
+  if (heroSlider) {
+    const heroSwiper = new Swiper(heroSlider.querySelector(".swiper-container"), {
+      modules: [Pagination, EffectFade],
+      spaceBetween: 20,
+      speed: 1600,
+      slidesPerView: 1,
+      watchOverflow: true,
+      observer: true,
+      observeParents: true,
+      loop: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+
+      pagination: {
+        el: heroSlider.querySelector(".swiper-pagination"),
+        clickable: true,
+      }
+    });
+  }
+
+  if (articlesSlider) {
+    let swiperInstance = null;
+  
+    function initSwiper() {
+      swiperInstance = new Swiper(articlesSlider.querySelector(".swiper-container"), {
+        modules: [EffectCards],
+        spaceBetween: 0,
+        effect: "cards",
+        grabCursor: true,
+        speed: 800,
+        centeredSlides: true,
+        initialSlide: 2,
+    
+        cardsEffect: {
+          rotate: false,
+          slideShadows: false,
+        },
+        loop: true,
+  
+        breakpoints: {
+          320: {
+            enabled: true,
+            slidesPerView: 1.18,
+          },
+     
+        },
+      });
+
+      articlesSlider.querySelector(".swiper-container").style.transform = "translateX(-3%)";
+    }
+  
+    function destroySwiper() {
+      if (swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
+      }
+    }
+  
+    function handleResize() {
+      if (window.innerWidth < 576) {
+        if (!swiperInstance) {
+          initSwiper();
+        }
+      } else {
+        destroySwiper();
+      }
+    }
+    handleResize();
+  
+    window.addEventListener("resize", handleResize);
+  }
 });

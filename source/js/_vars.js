@@ -10,6 +10,8 @@ export default {
 
   marqueSliders: document.querySelectorAll('.marque-slider'),
   bestSliders: document.querySelectorAll('.bestsellers-slider'),
+  articlesSlider: document.querySelector('.articles-slider'),
+  heroSlider: document.querySelector('.hero-slider'),
   dataHidden: document.querySelectorAll("[data-clip]"),
   search: document.querySelectorAll("[data-search]"),
 

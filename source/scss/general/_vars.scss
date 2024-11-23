@@ -16,7 +16,7 @@
   // --container-width-mini: calc(var(--content-width-mini) + (var(--container-offset) * 2));
 
   // --------------- default scroll variables ---------------
-  --scrollbar-thumb:  #7FFF92;
+  --scrollbar-thumb:  #dbdcae;
   --scrollbar-track: rgba(0, 0, 0, 0.18);
   --scrollbar-track-hover: transparent;
   --overlay-bg: rgba(0, 0, 0, 0.5);
@@ -30,10 +30,10 @@
 
   // --------------- default font-family variables ---------------
 
-  --font-family: "ProximaNova", sans-serif; // var(--font-family);
-  --second-family: "SpaceGrotesk", sans-serif; // var(--second-family);
-  --third-family: "Rubik", sans-serif; // var(--third-family);
-  --font3:  "Poppins", sans-serif; // var(--font3);
+  --font-family: "HelveticaNeueCyr", sans-serif; // var(--font-family);
+  --second-family: "BebasNeue", sans-serif; // var(--second-family);
+  --third-family: "Inter", sans-serif; // var(--third-family);
+  --font3:  "RoundedMplus1c", sans-serif; // var(--font3);
 
   // --------------- default text color variables ---------------
   --cl-a: #ffffff; // var(--cl-a);
@@ -58,19 +58,20 @@
   --bg-d: #d8d3cf; // var(--bg-d);
   --bg-e: #CBCBCB; // var(--bg-e);
   --bg-f:  #7d7d7d; // var(--bg-f);
+  --bg-g: #dbdcae; // var(--bg-g);
+  --bg-h: #FAE1A0; // var(--bg-h);
+  --bg-j: #4d4d4d; // var(--bg-j);
 
 
-  --bg-g: #41394d; // var(--bg-g);
-  --bg-h: #e7e7e7; // var(--bg-h);
-  --bg-j: #baffc4; // var(--bg-j);
 
   --bg-k: #DBDBDB; // var(--bg-k);
   --bg-l: #ffaf3e; // var(--bg-l);
 
   // --------------- default border color variable ---------------
   --br-a: #fff; // var(--br-a);
+  --br-b: #000; // var(--br-b);
 
-  --br-b: #FEFAE9; // var(--br-b);
+
   --br-c: #211C29; // var(--br-c);
   --br-d: #B9FF66; // var(--br-d);
   --br-e: #cfffd6; // var(--br-e);

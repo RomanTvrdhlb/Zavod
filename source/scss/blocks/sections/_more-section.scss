@@ -5,9 +5,9 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(30px, 5.814vw, 100px);
+        grid-gap: clamp(30px, 5.407vw, 93px);
         padding: 20px;
-        background: #d8d3cf;
+        background: var(--bg-d);
         border-radius: 25px;
 
         .main-link{
@@ -17,8 +17,8 @@
         }
 
         .editor{
-            max-width: 830px;
-            max-height: clamp(71px, 6.2791vw, 108px);
+            max-width: clamp(500px,48.2558vw, 830px);
+            max-height: clamp(92px, 6.2791vw, 108px);
             overflow: hidden;
         
             p{

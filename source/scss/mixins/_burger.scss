@@ -1,8 +1,8 @@
 /* stylelint-disable */
 
 @mixin burger {
-  --burger-width: 45px;
-  --burger-height: 30px;
+  --burger-width: 42px;
+  --burger-height: 28px;
   --burger-line-height: 3px;
   --border-radius: 0;
 
@@ -54,23 +54,25 @@
 
   &.active {
     &::before {
-      background: var(--cl-d);
       top: 50%;
-      transform: rotate(45deg) translate(-50%, -50%);
+      transform: rotate(35deg) translate(-50%, -50%);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     &::after {
-      background: var(--cl-d);
       top: 50%;
-      transform: rotate(-45deg) translate(-50%, -50%);
+      transform: rotate(-35deg) translate(-50%, -50%);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     .burger__line {
-      background: var(--cl-d);
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
+  }
+
+  @include tablet{
+    --burger-width: clamp(36px, 4.102vw, 42px);
+    --burger-height: clamp(18px, 2.734vw, 28px);
   }
 }

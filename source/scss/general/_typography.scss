@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  width: fit-content;
   transition: all .4s;
   font-family: var(--font-family);
   font-weight: 400;
@@ -133,6 +134,8 @@
   position: relative;
   z-index: 5;
   display: flex;
+  height: 100%;
+  align-items: center;
 
     &__btn{
       width: 32px;
@@ -147,11 +150,11 @@
 
     &__wrapp{
       position: absolute;
-      top: calc(100% + 14px);
+      top: calc(100% + clamp(15px, 1.1628vw, 20px));
       left: 4px;
       box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.15);
       background: var(--bg-d);
-      border-radius: 10px;
+      border-radius: 0 0 10px 10px;
       min-width: 208px;
       width: fit-content;
       height: fit-content;
@@ -170,6 +173,11 @@
         z-index: -1;
         opacity: 0;
         visibility: hidden;
+      }
+
+      @include mobile{
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
 
@@ -204,14 +212,14 @@
 .search-wrapper{
   position: absolute;
   left: 0;
-  top: calc(100% + 32px);
+  top: calc(100% + clamp(15px, 1.1628vw, 20px));
   z-index: 5;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
   grid-gap: 10px;
   background: var(--bg-d);
-  border-radius: 15px;
+  border-radius: 0 0 15px 15px;
   width: 332px;
   opacity: 0;
   visibility: hidden;

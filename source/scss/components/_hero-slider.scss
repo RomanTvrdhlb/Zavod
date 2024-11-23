@@ -1,0 +1,129 @@
+.hero-slider {
+  width: 100%;
+  display: flex;
+  height: clamp(300px, 50.6977vw, 872px);
+  position: relative;
+
+  @include small-tablet {
+    height: fit-content;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    transition: opacity 2s ease-in-out;
+
+    @include for-small-tablet{
+        height: clamp(300px, 50.6977vw, 872px);
+    }
+
+    @include small-tablet {
+      @include for-mobile{
+        height: Min(90.057vw , 707px);
+        border-radius: 25px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    width: 100%;
+    height: clamp(300px, 50.6977vw, 872px);
+    position: relative;
+    opacity: 73%;
+
+    svg {
+      display: flex;
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include for-small-tablet{
+        margin: 10px 0 0;
+    }
+
+    @include small-tablet {
+      height: auto;
+      width: 100%;
+    }
+
+    &-mob {
+      @include for-small-tablet {
+        display: none !important;
+      }
+
+      @include small-tablet {
+        display: flex !important;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    right: 0;
+    top: Min(17.3256vw, 290px);
+    z-index: 5;
+    gap: clamp(5px, 1.302vw, 25px);
+
+    &-bullet {
+      cursor: pointer;
+      display: flex;
+
+      opacity: 0.5;
+      background-color: var(--bg-a);
+
+      &-active {
+        opacity: 1;
+      }
+
+      @include for-small-tablet {
+        width: clamp(10px, 1.302vw, 25px);
+        height: clamp(10px, 1.302vw, 25px);
+      }
+
+      @include small-tablet {
+        width: clamp(10px, 3.255vw, 25px);
+        height: clamp(10px, 3.255vw, 25px);
+      }
+    }
+
+    &-active {
+      background-color: var(--bg-a);
+    }
+
+    @media (min-width: (1851px)) {
+      top: clamp(280px, 16.5698vw, 285px);
+    }
+
+    @include for-desktop {
+      transform: translate(-40%, -50%);
+    }
+
+    @include desktop {
+      transform: translate(-20%, -50%);
+    }
+
+    @include tablet {
+      transform: translate(-20%, -45%);
+    }
+   
+    @include small-tablet{
+        gap: clamp(5px, 1.953vw, 15px);
+        top: 50%;
+        transform: translate(-10%, -50%);
+    }
+
+   
+  }
+}

@@ -93,6 +93,26 @@
   }
 }
 
+.swiper-pagination{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, 1.4535vw, 25px);
+  align-items: center;
+
+  &-bullet{
+    display: flex;
+    width: clamp(15px, 1.4535vw, 25px);
+    height: clamp(15px, 1.4535vw, 25px);
+    border-radius: 50%;
+    background-color: var(--bg-h);
+    transition: all .3s;
+
+    &-active{
+      background-color: var(--bg-a);
+    }
+  }
+}
+
 // .main-btn {
 //   transition: all 0.4s;
 //   background: var(--bg-d);

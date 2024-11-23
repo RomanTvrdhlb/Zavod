@@ -39,15 +39,23 @@
     &__wrapp{
         display: flex;
         flex-direction: column;
+        gap: 6px;
     }
 
     &__inner{
         display: flex;
         flex-direction: column;
         gap: clamp(10px, 1.1628vw, 20px);
+        gap: 10px;
         position: relative;
         z-index: 1;
         height: 100%;
+        margin-bottom: 7px;
+    }
+
+    .white-btn{
+        height: clamp(33px, 3.7209vw, 64px);
+        flex-shrink: 0;
     }
 
 
@@ -55,6 +63,7 @@
         display: flex;
         gap: clamp(15px, 1.1628vw, 20px);
         flex-grow: 1;
+        margin-top: 3px;
     }
 
     &__value{
@@ -119,6 +128,7 @@
         line-height: 108%;
         color: var(--cl-c);
         padding-right: 20%;
+        margin: -10px 0 0;
 
 
         @include tablet{

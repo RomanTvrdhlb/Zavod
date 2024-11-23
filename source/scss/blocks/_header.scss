@@ -1,30 +1,74 @@
 .header {
   left: 0;
   right: 0;
-  position: absolute;
-  z-index: 30;
+  position: fixed;
+  z-index: 95;
   top: 0;
-  padding: clamp(15px, 2.0833vw, 30px) 0;
-  transition: all 0.4s .5s;
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  padding: clamp(15px, 1.1628vw, 20px) 0;
   background: var(--bg-b);
+
+  &.sticky {
+    @include for-tablet {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @include tablet {
+      transform: translate(0) !important;
+      padding: clamp(15px, 1.7442vw, 30px) 0;
+    }
+
+    &.scroll-up {
+      transform: translateY(-110%);
+    }
+
+    &.return-to-place {
+      padding: clamp(15px, 1.7442vw, 30px) 0;
+      transform: translateY(0);
+
+      .logo {
+        @include for-tablet{
+          width: clamp(130px, 10.3488vw, 178px);
+          height: clamp(52px, 4.0698vw, 70px);
+          transition: 0s;
+        }
+      }
+
+      @include for-tablet {
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+  }
 
   &.open-menu {
     transition: background 0.2s;
     transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-    background: var(--bg-f);
   }
 
-  // .container{
-  //   max-width: 1920px;
-  //   padding: 0 15px 0 clamp(25px, 2.907vw, 50px);
-  // }
-
-  &__inner{
+  &__inner {
     display: flex;
     align-items: center;
-    grid-gap: clamp(25px, 5.814vw, 100px);
     justify-content: flex-end;
+    height: 100%;
+
+    @include for-laptop {
+      grid-gap: clamp(25px, 5.814vw, 100px);
+    }
+
+    @include laptop {
+      grid-gap: clamp(25px, 2.907vw, 50px);
+    }
+
+    @include tablet {
+      .header__search {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      .geo-link {
+        display: none;
+      }
+    }
   }
 
   &__box {
@@ -33,22 +77,21 @@
     z-index: 2;
     align-items: center;
 
-
     @include for-laptop {
       justify-content: space-between;
+      grid-gap: clamp(25px, 5.814vw, 100px);
+    }
+
+    @include laptop {
+      grid-gap: clamp(25px, 2.907vw, 50px);
     }
 
     @include for-tablet {
       grid-template-columns: auto 1fr auto;
     }
 
-    @include for-tablet {
-      grid-gap: clamp(25px, 5.814vw, 100px);
-    }
-
     @include tablet {
-      grid-template-columns: auto 1fr;
-      grid-gap: 10px;
+      grid-template-columns: auto 1fr auto;
     }
 
     @include laptop {
@@ -56,61 +99,18 @@
         padding: 16px clamp(20px, 1.7361vw, 25px);
       }
     }
+
+    .main-phone {
+      &__btn {
+        @media (max-width: (385px)) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
   }
 
-  // &__nav {
-  //   display: flex;
-  //   align-items: center;
-  //   z-index: 5;
-  //   justify-content: center;
-
-  //   ul {
-  //     display: flex;
-  //     align-items: center;
-  //     grid-gap: clamp(10px, 3.4722vw, 50px);
-
-  //     li {
-  //       display: flex;
-  //       align-items: center;
-  //       position: relative;
-  //       z-index: 1;
-  //     }
-
-  //     a {
-  //       transition: all 0.3s linear;
-  //       display: flex;
-  //       align-items: center;
-  //       grid-gap: 5px;
-  //       position: relative;
-  //       font-family: var(--font-family);
-  //       font-weight: 600;
-  //       font-size: clamp(16px, 1.25vw, 18px);
-  //       line-height: 133%;
-  //       color: var(--cl-c);
-  //       white-space: nowrap;
-
-  //       &.active {
-  //         color: var(--cl-d);
-  //       }
-
-  //       &:hover {
-  //         color: var(--cl-d);
-  //       }
-  //     }
-  //   }
-
-  //   @include laptop {
-  //     @include for-tablet {
-  //       justify-content: center;
-  //     }
-  //   }
-
-  //   @include for-tablet{
-  //     padding-left: Min(8.333vw, 160px);
-  //   }
-  // }
-
-  &__btn{
+  &__btn {
     display: flex;
     gap: 12px;
     align-items: center;
@@ -122,7 +122,7 @@
     position: relative;
     z-index: 1;
 
-    &-count{
+    &-count {
       width: 17px;
       height: 17px;
       display: flex;
@@ -141,26 +141,42 @@
       border-radius: 50%;
     }
 
-    svg,img{
+    svg,
+    img {
       width: 32px;
       height: 32px;
-      transition: all .3s;
+      transition: all 0.3s;
+
+      @media (max-width: (385px)) {
+        width: 25px;
+        height: 25px;
+      }
     }
 
-    svg{
+    svg {
       fill: none;
     }
 
-    &:hover{
-      svg,img{
+    &:hover {
+      svg,
+      img {
         transform: scale(1.1);
+      }
+    }
+
+    &.user {
+      @include mobile {
+        display: none;
       }
     }
   }
 
-  &__search{
+  &__search {
     position: relative;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .burger {
@@ -169,8 +185,7 @@
     @include burger;
   }
 
-  @include tablet {
-    padding: 15px 0;
-    overflow: hidden;
+  .logo{
+    transition: 0.4s;
   }
 }
