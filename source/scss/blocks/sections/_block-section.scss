@@ -1,45 +1,46 @@
 .block-section {
   margin-bottom: clamp(100px, 8.7209vw, 150px);
 
-  &__wrapp {
+  &__content {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
 
     .alert-icon {
       position: absolute;
       right: 0;
       top: 0;
+
+      svg {
+        width: clamp(69px, 14.063vw, 144px);
+        height: clamp(61px, 12.5vw, 128px);
+      }
     }
-  }
 
-  &__title {
-    font-family: var(--second-family);
-    font-size: 100px;
-    line-height: 100%;
-    font-weight: 700;
-    color: var(--cl-m);
-    text-transform: uppercase;
-  }
-
-  &__descr {
-    font-size: 60px;
-    line-height: 108%;
-    font-weight: 400;
-    color: var(--cl-m);
-
-    a {
-      font-weight: 500;
+    h1 {
+      margin-bottom: clamp(30px, 4.883vw, 50px);
+      font-family: var(--second-family);
+      font-size: clamp(35px, 5.208vw, 100px);
+      line-height: 100%;
+      font-weight: 700;
+      color: var(--cl-m);
+      text-transform: uppercase;
     }
-  }
 
-  &__text {
-    max-width: 850px;
-    width: 100%;
+    h2 {
+      margin: clamp(30px, 4.883vw, 50px) 0 30px;
+      font-size: clamp(24px, 5.859vw, 60px);
+      line-height: 108%;
+      font-weight: 400;
+      color: var(--cl-m);
+
+      a {
+        font-weight: 500;
+      }
+    }
 
     p {
-      font-size: 24px;
+      max-width: 850px;
+      width: 100%;
+      font-size: clamp(22px, 2.344vw, 24px);
       line-height: 112%;
     }
 
