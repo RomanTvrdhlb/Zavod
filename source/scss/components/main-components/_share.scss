@@ -3,8 +3,13 @@
   align-items: center;
   gap: 20px;
 
+  @include mobile {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   p {
-    font-size: 35px;
+    font-size: clamp(20px, 3.418vw, 35px);
     line-height: 100%;
     font-weight: 400;
     color: var(--cl-m);
