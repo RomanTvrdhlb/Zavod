@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   if (heroSlider) {
     const heroSwiper = new Swiper(heroSlider.querySelector(".swiper-container"), {
-      modules: [Pagination, EffectFade],
+      modules: [Pagination, EffectFade, Autoplay],
       spaceBetween: 20,
       speed: 1600,
       slidesPerView: 1,
@@ -93,6 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
       effect: "fade",
       fadeEffect: {
         crossFade: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false, 
       },
 
       pagination: {
