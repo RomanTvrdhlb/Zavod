@@ -1,17 +1,18 @@
 .articles-card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   gap: clamp(20px, 2.907vw, 50px);
   border-radius: 25px;
   background: var(--bg-d);
   padding: clamp(16px, 1.1628vw, 20px);
-  position: relative;
 
   @include mobile{
     padding: 20px;
   }
-  
+
   &__image {
     display: flex;
     border-radius: clamp(20px, 1.4535vw, 25px);
@@ -47,11 +48,13 @@
   }
 
   &__top {
+    // position: relative;
     display: flex;
-    gap: 10px;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 10px;
   }
-  
+
   &__tag {
     border: 1px solid var(--br-b);
     border-radius: 8px;
@@ -73,12 +76,17 @@
 
   &__bottom {
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 10px 15px;
     height: 100%;
 
     p {
       width: 100%;
+      font-size: 35px;
+      font-size: 27px;
+      line-height: 100%;
+      font-weight: 400;
 
       @include for-tablet{
         max-width: clamp(300px, 33.6047vw, 578px);
@@ -87,23 +95,21 @@
 
     @include tablet{
       flex-direction: column;
-     
     }
   }
 
   &__date {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 8px;
     width: fit-content;
     height: clamp(29px, 1.7442vw, 30px);
     background: var(--cl-c);
-    justify-content: center;
-    align-items: center;
-    align-self: end;
     font-family: var(--font-family);
-    font-weight: 400;
     font-size: clamp(18px, 1.3953vw, 24px);
     line-height: 108%;
+    font-weight: 400;
     color: var(--bg-d);
     padding: 7px 10px 5px;
 

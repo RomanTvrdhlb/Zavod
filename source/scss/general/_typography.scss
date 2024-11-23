@@ -15,10 +15,6 @@
   font-size: clamp(20px, 2.0349vw, 35px);
   text-transform: uppercase;
   color: var(--cl-c);
-
-  @include for-tablet{
-    line-height: 77%;
-  }
 }
 
 .main-link{
@@ -66,13 +62,13 @@
   &--bottom{
     font-size: clamp(30px, 3.4884vw, 60px);
     gap: clamp(10px, .8721vw, 15px);
-    
+
 
     .main-link{
       &__arrow{
         width: clamp(40px, 3.0233vw, 52px);
         height: clamp(40px, 3.0233vw, 52px);
-       
+
         svg,img{
           transform: rotate(90deg);
           width: clamp(18px, 1.2791vw, 22px);
@@ -92,13 +88,13 @@
   &--small{
     font-size: clamp(30px, 3.4884vw, 60px);
     gap: clamp(10px, .8721vw, 15px);
-    
+
 
     .main-link{
       &__arrow{
         width: clamp(40px, 3.0233vw, 52px);
         height: clamp(40px, 3.0233vw, 52px);
-       
+
         svg,img{
           width: clamp(18px, 1.3953vw, 24px);
         }
@@ -252,7 +248,7 @@
     gap: 10px;
     justify-content: space-between;
     width: 100%;
-    
+
     svg{
       width: 40px;
       height: 35px;

@@ -4,6 +4,7 @@
   &__wrapp {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 50px;
   }
 
@@ -26,7 +27,7 @@
         grid-column: 2;
         grid-row: span 2;
       }
-  
+
       &.mode{
         grid-column: 1/-1;
       }
@@ -34,12 +35,16 @@
   }
 
   &__tags {
-    width: fit-content;
     padding: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
     border: 1px solid var(--br-h);
+
+    @include small-tablet{
+      width: 100%;
+      overflow-x: auto;
+    }
   }
 
   &__tag {

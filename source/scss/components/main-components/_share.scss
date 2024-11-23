@@ -1,0 +1,23 @@
+.share {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  p {
+    font-size: 35px;
+    line-height: 100%;
+    font-weight: 400;
+    color: var(--cl-m);
+    text-transform: uppercase;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+      fill: transparent;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.post-section {
+  margin-bottom: clamp(50px, 8.7209vw, 150px);
+  overflow: hidden;
+
+  &__top {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__tag {
+    padding: 10px 15px;
+    background-color: var(--bg-a);
+    border-radius: 8px;
+    font-size: 25px;
+    line-height: 100%;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: all 0.3s;
+  }
+
+  &__pubtime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: fit-content;
+    height: clamp(29px, 1.7442vw, 30px);
+    background: var(--cl-c);
+    font-family: var(--font-family);
+    font-size: clamp(18px, 1.3953vw, 24px);
+    line-height: 108%;
+    font-weight: 400;
+    color: var(--bg-d);
+    padding: 7px 10px 5px;
+
+    @include mobile{
+      line-height: 144%;
+    }
+  }
+
+  &__info {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__author {
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--cl-m);
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: var(--second-family);
+    font-size: 100px;
+    line-height: 100%;
+    font-weight: 700;
+  }
+
+  &__image {
+    display: flex;
+    margin-bottom: 50px;
+
+    picture,
+    img {
+      border-radius: 25px;
+    }
+  }
+
+  &__box {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 850px 1fr;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    span {
+      font-size: 35px;
+      line-height: 100%;
+      font-weight: 400;
+      color: var(--cl-m);
+      text-transform: uppercase;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        position: relative;
+        padding-left: 20px;
+        font-size: 24px;
+        line-height: 112%;
+        font-weight: 500;
+        color: var(--cl-m);
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 5px;
+          top: 10px;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: var(--bg-c);
+        }
+      }
+    }
+  }
+
+  &__text {
+    p {
+      font-size: 24px;
+      line-height: 112%;
+      font-weight: 400;
+      color: var(--cl-m);
+    }
+
+    p + p {
+      margin-top: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

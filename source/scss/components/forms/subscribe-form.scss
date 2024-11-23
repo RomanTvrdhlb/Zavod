@@ -1,0 +1,54 @@
+.subscribe-form {
+  height: 100%;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: var(--bg-a);
+
+  &__image {
+    display: flex;
+    margin-bottom: 30px;
+
+    picture,
+    img {
+      width: 100%;
+      border-radius: 25px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 70px;
+    line-height: 100%;
+    font-weight: 400;
+  }
+
+  &__input {
+    padding: 23px 27px;
+    border: 1px solid var(--br-b);
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--cl-b);
+
+    &::placeholder {
+      color: rgba(5, 5, 5, 0.75);
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    padding: 30px 0;
+    background-color: var(--bg-m);
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-size: 40px;
+    line-height: 100%;
+    font-weight: 500;
+    color: var(--cl-c);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
