@@ -84,7 +84,8 @@
   }
 
   &:hover {
-  
+    background: var(--bg-b);
+    color: var(--cl-a);
   }
 
   &:disabled {
