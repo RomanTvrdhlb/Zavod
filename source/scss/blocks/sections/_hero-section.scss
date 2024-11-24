@@ -61,6 +61,7 @@
     }
 
     @include for-small-tablet{
+      z-index: 5;
       max-width: Min(51.4535vw, 885px);
       position: absolute;
       top: 0;
@@ -76,12 +77,12 @@
   &__bottom {
     display: flex;
     flex-direction: column;
-    
-    
+
+
     p {
       font-family: var(--font-family);
       font-weight: 400;
-      
+
       color: var(--cl-c);
       line-height: 100%;
 

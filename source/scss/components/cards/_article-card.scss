@@ -37,6 +37,8 @@
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
+    max-width: calc(100% - 40px);
     gap: 10px;
 
     @include laptop{
