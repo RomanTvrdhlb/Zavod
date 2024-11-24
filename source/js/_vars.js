@@ -12,10 +12,11 @@ export default {
   bestSliders: document.querySelectorAll('.bestsellers-slider'),
   articlesSlider: document.querySelector('.articles-slider'),
   heroSlider: document.querySelector('.hero-slider'),
+  relatedSlider: document.querySelector('.related-slider'),
   dataHidden: document.querySelectorAll("[data-clip]"),
   search: document.querySelectorAll("[data-search]"),
 
-  
+
   mainForms: document.querySelectorAll('.main-form'),
   burger: document.querySelectorAll('.burger'),
   mobileMenu: document.querySelector('.mobile'),

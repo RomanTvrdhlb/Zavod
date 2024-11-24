@@ -1,0 +1,75 @@
+.related-slider {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-e);
+  border-radius: 25px;
+  display: flex;
+
+  @include for-tablet{
+    padding-bottom: 40px;
+  }
+
+  @include tablet{
+    padding: 40px 0;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    transition: opacity 2s ease-in-out;
+  }
+
+  .catalog-card {
+    display: grid;
+    grid-template-columns: 270px auto;
+    grid-template-rows: 1fr;
+
+    @include for-tablet{
+      display: grid;
+      grid-template-columns: 270px auto;
+      grid-template-rows: 1fr;
+      align-items: flex-end;
+    }
+  }
+
+  .catalog-card__image {
+    grid-row: span 2;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    height: clamp(180px, 21.042vw, 404px);
+
+    @include for-small-tablet{
+      // height: clamp(180px, 21.042vw, 404px);
+    }
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .catalog-card__info {
+    max-width: 320px;
+  }
+
+  .swiper-pagination {
+    z-index: 5;
+    cursor: pointer;
+
+    &-active {
+      background-color: var(--bg-a);
+    }
+
+    @include for-mobile {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

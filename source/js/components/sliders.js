@@ -3,7 +3,7 @@ import vars from "../_vars.js";
 import { Navigation, Pagination, EffectCards, Autoplay, EffectFade } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const { marqueSliders, bestSliders, articlesSlider, heroSlider} = vars;
+  const { marqueSliders, bestSliders, articlesSlider, heroSlider, relatedSlider} = vars;
 
   marqueSliders && marqueSliders.forEach(function (slider) {
     const container = slider.querySelector(".swiper-container");
@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
       speed: 5000,
       autoplay: {
         delay: 0,
-        disableOnInteraction: false, 
+        disableOnInteraction: false,
       },
-    
+
       breakpoints: {
         320: {
           spaceBetween: 30,
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: nextBtn,
         prevEl: prevBtn,
       },
-   
+
       breakpoints: {
         320:{
           slidesPerView: 'auto',
@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  
   if (heroSlider) {
     const heroSwiper = new Swiper(heroSlider.querySelector(".swiper-container"), {
       modules: [Pagination, EffectFade, Autoplay],
@@ -96,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false, 
+        disableOnInteraction: false,
       },
 
       pagination: {
@@ -108,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (articlesSlider) {
     let swiperInstance = null;
-  
+
     function initSwiper() {
       swiperInstance = new Swiper(articlesSlider.querySelector(".swiper-container"), {
         modules: [EffectCards],
@@ -118,32 +117,32 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 800,
         centeredSlides: true,
         initialSlide: 2,
-    
+
         cardsEffect: {
           rotate: false,
           slideShadows: false,
         },
         loop: true,
-  
+
         breakpoints: {
           320: {
             enabled: true,
             slidesPerView: 1.18,
           },
-     
+
         },
       });
 
       articlesSlider.querySelector(".swiper-container").style.transform = "translateX(-3%)";
     }
-  
+
     function destroySwiper() {
       if (swiperInstance) {
         swiperInstance.destroy(true, true);
         swiperInstance = null;
       }
     }
-  
+
     function handleResize() {
       if (window.innerWidth < 576) {
         if (!swiperInstance) {
@@ -154,7 +153,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
     handleResize();
-  
+
     window.addEventListener("resize", handleResize);
+  }
+
+  if (relatedSlider) {
+    const relatedSwiper = new Swiper(relatedSlider.querySelector(".swiper-container"), {
+      modules: [Pagination, EffectFade, Autoplay],
+      spaceBetween: 20,
+      speed: 1600,
+      slidesPerView: 1,
+      watchOverflow: true,
+      observer: true,
+      observeParents: true,
+      loop: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+
+      pagination: {
+        el: relatedSlider.querySelector(".swiper-pagination"),
+        clickable: true,
+      }
+    });
   }
 });

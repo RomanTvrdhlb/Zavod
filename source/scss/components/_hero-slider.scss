@@ -117,13 +117,13 @@
     @include tablet {
       transform: translate(-20%, -45%);
     }
-   
+
     @include small-tablet{
         gap: clamp(5px, 1.953vw, 15px);
         top: 50%;
         transform: translate(-10%, -50%);
     }
 
-   
+
   }
 }
