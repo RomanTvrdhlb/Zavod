@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="cart-section">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item home">
+            <a href="/">
+              <p>Головна</p>
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#home'></use>
+              </svg>
+            </a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">
+            <p>кошик</p>
+          </li>
+        </ul>
+
+        <div class="cart-section__title title">Кошик</div>
+
+        <div class="cart-section__box">
+          <div class="cart-section__wrapp">
+            <div class="cart-section__orders">
+              ВИГІДНА ПРОПОЗИЦІЯ
+            </div>
+
+            <form class="cart-form">
+              <div class="cart-form__box">
+                <div class="cart-form__title">КОНТАКТНА ІНФОРМАЦІЯ</div>
+
+                <div class="cart-form__content">
+                  <div class="cart-form__inputs">
+                    <input class="cart-form__input" name="name" type="text" placeholder="Імʼя*" required>
+                    <input class="cart-form__input" name="tel" type="tel" placeholder="Телефон*" required>
+                    <input class="cart-form__input" name="emai" type="email" placeholder="Email*" required>
+                    <textarea class="cart-form__textarea" name="message" placeholder="Коментар" required></textarea>
+                  </div>
+
+                  <div class="cart-form__selects">
+                    <select name="delivery">
+                      <option value="Доставка до відділення Нової пошти"></option>
+                      <optgroup>
+                        <option value="Відділення № 45 місто Дніпро (проспект О. Поля, 78)"></option>
+                        <option value="Відділення № 45 місто Дніпро (проспект Дмитра Якорницького, 103)"></option>
+                        <option value="Відділення № 45 місто Дніпро (проспект О. Поля, 78)"></option>
+                        <option value="Відділення № 45 місто Дніпро (проспект Дмитра Якорницького, 103)"></option>
+                      </optgroup>
+                    </select>
+
+
+                  </div>
+                </div>
+              </div>
+
+              <button class="cart-form__submit black-btn">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+            </form>
+          </div>
+
+          <div class="cart-section__aside">
+            <a class="cart-section__download white-btn" href="#" download="">ЗАВАНТАЖИТИ КП</a>
+
+            <div class="cart-section__totals">
+              <ul class="cart-section__review">
+                <li class="cart-section__review-row">
+                  <p>У кошику 2 товарів</p>
+                  <span class="total">240 грн.</span>
+                </li>
+                <li class="cart-section__review-row">
+                  <p>Знижка %</p>
+                  <span class="sale-total">20 грн.</span>
+                </li>
+                <li class="cart-section__review-row sale">
+                  <p>Знижка на все замовлення</p>
+                  <span class="sale-total">20 грн.</span>
+                </li>
+              </ul>
+
+              <div class="cart-section__subtotal">
+                <p>ДО СПЛАТИ</p>
+                <span>220 грн.</span>
+              </div>
+
+              <div class="cart-section__alert">
+                <svg width='28' height='28'>
+                  <use href='img/sprite/sprite.svg#mark'></use>
+                </svg>
+                <p>Сума мінімального замовлення <span>500 грн</span>.</p>
+              </div>
+            </div>
+
+            <a class="cart-section__back" href="#">
+              ПОВЕРНУТИСЬ ДО ПОКУПОК
+              <svg width='14' height='18'>
+                <use href='img/sprite/sprite.svg#arrow-back'></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>

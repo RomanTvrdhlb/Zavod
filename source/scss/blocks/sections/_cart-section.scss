@@ -1,0 +1,147 @@
+.cart-section {
+  margin-bottom: clamp(100px, 8.7209vw, 150px);
+
+  &__title {
+    margin-bottom: clamp(20px, 4.883vw, 50px);
+  }
+
+  &__box {
+    display: grid;
+    gap: 100px clamp(20px, 2.083vw, 40px);
+
+    @include for-tablet{
+      grid-template-columns: 1fr clamp(440px, 30.208vw, 580px);
+    }
+
+    @include tablet{
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__wrapp {
+    @include for-tablet{
+      display: flex;
+      flex-direction: column;
+      gap: 180px;
+    }
+
+    @include tablet{
+      display: contents;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__download {
+    margin-left: auto;
+  }
+
+  &__totals {
+    background-color: var(--bg-d);
+    border-radius: 25px;
+
+    @include for-small-tablet{
+      padding: 20px clamp(10px, 1.042vw, 20px);
+    }
+  }
+
+  &__review {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        font-size: clamp(20px, 1.3953vw, 24px);
+        line-height: 112%;
+        font-weight: 500;
+      }
+
+      .sale-total {
+        color: var(--cl-a);
+      }
+
+      &.sale {
+        padding: 5px 10px;
+        background-color: var(--bg-g);
+
+        p {
+          font-weight: 500;
+        }
+
+        span {
+          color: var(--cl-m);
+        }
+      }
+    }
+  }
+
+  &__subtotal {
+    padding: 20px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    span {
+      font-size: 48px;
+      line-height: 112%;
+      font-weight: 500;
+      color: var(--cl-m);
+    }
+  }
+
+  &__alert {
+    padding: 10px 0;
+    border: 1px solid var(--br-a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    svg {
+      fill: transparent;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 112%;
+      font-weight: 400;
+      color: var(--cl-m);
+
+      span {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--cl-m);
+      }
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--cl-m);
+
+    svg {
+      fill: transparent;
+    }
+  }
+}

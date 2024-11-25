@@ -94,6 +94,46 @@
   }
 }
 
+.black-btn {
+  transition: all 0.4s;
+  padding: 9px clamp(9px, 1.7442vw, 30px);
+  height: clamp(33px, 3.7209vw, 64px);
+  border-radius: 10px;
+  background: var(--bg-b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  width: fit-content;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(13px, 1.3953vw, 24px);
+  color: var(--cl-a);
+
+  img,
+  svg {
+    pointer-events: none;
+    display: flex;
+    width: 20px;
+    aspect-ratio: 1;
+  }
+
+  svg {
+    fill: none;
+  }
+
+  &:hover {
+    background: var(--bg-a);
+    color: var(--cl-b);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
 .swiper-pagination{
   display: flex;
   flex-direction: column;

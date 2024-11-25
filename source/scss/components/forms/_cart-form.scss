@@ -1,0 +1,91 @@
+.cart-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(30px, 4.883vw, 50px);
+
+  @include tablet{
+    order: 1;
+  }
+
+  &__box {
+    padding: clamp(20px, 3.906vw, 30px);
+    background-color: var(--bg-d);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3.906vw, 30px);
+  }
+
+  &__title {
+    font-size: clamp(20px, 1.3953vw, 24px);
+    line-height: 112%;
+    font-weight: 500;
+    color: var(--cl-m);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 2.604vw, 20px);
+  }
+
+  &__input {
+    padding: clamp(10px, 2.604vw, 20px);
+    border: 2px solid transparent;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-family);
+    font-size: clamp(14px, 0.938vw, 18px);
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--cl-b);
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-size: clamp(14px, 0.938vw, 18px);
+      line-height: 150%;
+      font-weight: 400;
+      color: rgba(5, 5, 5, 0.75);
+    }
+
+    &:invalid {
+      border: 2px solid #ff342b;
+    }
+  }
+
+  &__textarea {
+    min-height: clamp(150px, 29.948vw, 230px);
+    padding: clamp(10px, 2.604vw, 20px);
+    border: 2px solid transparent;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-family);
+    font-size: clamp(14px, 0.938vw, 18px);
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--cl-b);
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-size: clamp(14px, 0.938vw, 18px);
+      line-height: 150%;
+      font-weight: 400;
+      color: rgba(5, 5, 5, 0.75);
+    }
+
+    &:invalid {
+      border: 2px solid #ff342b;
+    }
+  }
+
+  &__submit {
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 708px;
+    width: 100%;
+  }
+}
