@@ -75,4 +75,38 @@
       color: var(--cl-b);;
     }
   }
+
+  &.cabinet{
+    max-width: 560px;
+    gap: 30px;
+
+    .contact-form{
+
+      &__box{
+        padding: 0;
+        border-radius: 0;
+        gap: 20px;
+        background: transparent;
+      }
+
+      &__input{
+        height: 67px;
+        background: transparent;
+        font-size: 18px;
+
+        &::placeholder{
+          color: rgba(5, 5, 5, 0.75);
+        }
+
+        &:not(:required){
+          border: solid 1px;
+          border-color: var(--br-b);
+        }
+      }
+    }
+
+    .white-btn{
+      width: 100%;
+    }
+  }
 }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <section class="cabinet-section">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item home">
+            <a href="/">
+              <p>Головна</p>
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#home'></use>
+              </svg>
+            </a>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">
+            <p>особистий кабінет</p>
+          </li>
+        </ul>
+
+        <div class="cabinet-section__box">
+          <h1 class="title">ОСОБИСТИЙ КАБІНЕТ</h1>
+
+          <div class="cabinet-tabs" data-tabs-parrent>
+            <ul class="cabinet-tabs__nav">
+              <li class="cabinet-tabs__item">
+                <button class="cabinet-tabs__btn active" type="button" data-tab="1">
+                  <svg width='32' height='32'>
+                    <use href='img/sprite/sprite.svg#padlock'></use>
+                  </svg>
+                  Особисті дані
+                </button>
+              </li>
+              <li class="cabinet-tabs__item">
+                <button class="cabinet-tabs__btn" type="button" data-tab="2">
+                  <svg width='32' height='32'>
+                    <use href='img/sprite/sprite.svg#padlock2'></use>
+                  </svg>
+                  Пароль
+                </button>
+              </li>
+              <li class="cabinet-tabs__item">
+                <button class="cabinet-tabs__btn" type="button" data-tab="3">
+                  <svg width='32' height='32'>
+                    <use href='img/sprite/sprite.svg#padlock3'></use>
+                  </svg>
+                  Замовлення
+                </button>
+              </li>
+              <li class="cabinet-tabs__item">
+                <button class="cabinet-tabs__btn" type="button" data-tab="4">
+                  <svg width='32' height='32'>
+                    <use href='img/sprite/sprite.svg#padlock4'></use>
+                  </svg>
+                  Вихід
+                </button>
+              </li>
+            </ul>
+            <ul class="cabinet-tabs__content">
+              <li class="cabinet-tabs__content-item active" data-tab-content="1">
+                  <div class="cabinet-tabs__inner">
+                      <span class="title">Особисті дані</span>
+                      <form class="contact-form cabinet">
+                        <div class="contact-form__box">
+                          <input class="contact-form__input" name="name" type="text" placeholder="Імʼя*" required>
+                          <input class="contact-form__input" name="surname" type="text" placeholder="Прізвище*">
+                          <input class="contact-form__input" name="company" type="text" placeholder="Компанія*" >
+                          <input class="contact-form__input" name="date" type="number" placeholder="Дата народження*" >
+                          <input class="contact-form__input" name="place" type="text" placeholder="Населений пункт*" >
+                          <input class="contact-form__input" name="tel" type="tel" placeholder="Номер телефону*" >
+                        </div>
+        
+                        <button class="white-btn">ЗБЕРЕГТИ</button>
+                      </form>
+                  </div>
+              </li>
+              <li class="cabinet-tabs__content-item" data-tab-content="2">
+                <div class="cabinet-tabs__inner">
+                  <span class="title">Особисті дані2</span>
+                </div>
+              </li>
+              <li class="cabinet-tabs__content-item" data-tab-content="3">
+                <div class="cabinet-tabs__inner">
+                  <span class="title">Особисті дані3</span>
+                </div>
+              </li>
+              <li class="cabinet-tabs__content-item" data-tab-content="4">
+                <div class="cabinet-tabs__inner">
+                  <span class="title">Особисті дані4</span>
+                </div>
+              </li>
+            </ul>
+       
+          </div>
+
+        </div>
+      
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>
