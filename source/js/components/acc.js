@@ -40,13 +40,16 @@ const accordionClickHandler = function (e) {
   const isSingle = accordionParent.dataset.single === "true";
   const hasBreakpoint = accordionParent.dataset.breakpoint !== undefined;
 
-  // Если аккордеон открыт, то закрываем его
+  // Получаем текущий открытый аккордеон для этого родителя
+  let openedAccordion = accordionParent._openedAccordion || null;
+
+  // Если аккордеон открыт, закрываем его
   if (isAccordionOpen) {
       closeAccordion(accordionContent);
       toggleAccordionButton(this); // Удаляем active у кнопки
-      openedAccordion = null;
+      accordionParent._openedAccordion = null;
   } else {
-      // Если single true и нет breakpoint, закрываем предыдущий аккордеон всегда
+      // Если single true и нет breakpoint, закрываем предыдущий аккордеон
       if (isSingle && (!hasBreakpoint || document.documentElement.clientWidth <= accordionParent.dataset.breakpoint)) {
           if (openedAccordion) {
               closeAccordion(openedAccordion);
@@ -57,7 +60,7 @@ const accordionClickHandler = function (e) {
 
       openAccordion(accordionContent);
       toggleAccordionButton(this); // Добавляем active к текущей кнопке
-      openedAccordion = accordionContent;
+      accordionParent._openedAccordion = accordionContent; // Сохраняем текущий открытый аккордеон
   }
 };
 
@@ -114,6 +117,9 @@ export const accInit = (accParents, dataBtn, dataContent) => {
 
           if (accordionParent.dataset.default) {
               accordionDefaultOpen(accordionParent, accordionParent.dataset.default);
+              accordionParent._openedAccordion = accordionParent.querySelector(
+                  `[data-content="${accordionParent.dataset.default}"]`
+              );
           }
 
           syncButtonWithContent(accordionParent, dataBtn, dataContent);

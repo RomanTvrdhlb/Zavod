@@ -6,6 +6,7 @@ import './components/tabs.js';
 import './components/toTop.js';
 import './components/select.js';
 import './components/forms.js';
+import './components/counter.js';
 
 import './components/sliders.js';
 import './components/search.js';

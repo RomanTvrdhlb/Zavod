@@ -6,7 +6,7 @@
   @include('partials/header.html')
 
   <main>
-    <div class="product-section">
+    <section class="product-section">
       <div class="container">
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item home">
@@ -55,15 +55,92 @@
                 </li>
               </ul>
 
+              <div class="product-section__currency">
+                <div class="product-section__price">
+                  <span class="product-section__price-old">40<i>$</i></span>
+                  <span class="product-section__price-current">30<i>$</i></span>
+                </div>
+  
+                <div class="product-btns">
+                  <button type='button' class="product-btns__plus">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#plus'></use>
+                    </svg>
+                  </button>
+                  <input type="number" name="product_quantity_4" value="0" class="product-btns__quantity" data-quantity="1"></input>
+                  <button type='button' class="product-btns__minus">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#minus'></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
               <div class="product-section__choose">
                 <span>Оберіть потрібну кількість</span>
 
                 <ul class="product-section__choose-variants">
                   <li>
-                    4
+                    <div class="product-card">
+                      <div class="product-card__inner">
+                        <span class="product-card__icon">
+                          <svg width='30' height='72'>
+                            <use href='img/sprite/sprite.svg#my3'></use>
+                          </svg>
+                        </span>
+                        <span class="product-card__value"><i>x</i>4</span>
+                      </div>
+
+                      <div class="product-card__currency">
+                        <span class="product-card__quantity">30 <i>₴/ шт.</i> </span>
+                        <span class="product-card__price">720 <i>₴</i></span>
+                      </div>
+
+                      <div class="product-btns">
+                        <button type='button' class="product-btns__plus">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#plus'></use>
+                          </svg>
+                        </button>
+                        <input type="number" name="product_quantity_2" value="0" class="product-btns__quantity" data-quantity="1"></input>
+                        <button type='button' class="product-btns__minus">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#minus'></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </li>
                   <li>
-                    24
+                    <div class="product-card">
+                      <div class="product-card__inner">
+                        <span class="product-card__icon">
+                          <svg width='30' height='72'>
+                            <use href='img/sprite/sprite.svg#my3'></use>
+                          </svg>
+                        </span>
+                        <span class="product-card__value"><i>x</i>24</span>
+                      </div>
+
+                      <div class="product-card__currency">
+                        <span class="product-card__quantity">30 <i>₴/ шт.</i> </span>
+                        <span class="product-card__price">720 <i>₴</i></span>
+                      </div>
+
+                      <div class="product-btns">
+                        <button type='button' class="product-btns__plus">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#plus'></use>
+                          </svg>
+                        </button>
+                        <input type="number" name="product_quantity_2" value="0" class="product-btns__quantity" data-quantity="1"></input>
+                        <button type='button' class="product-btns__minus">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#minus'></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -76,6 +153,7 @@
             <div class="product-section__info">
               <p class="product-section__description">APPS (ЕПС) виготовляється методом бродіння з натурального 100%
                 яблучного соку без додавання спирту</p>
+
 
               <ul class='product-section__accordion accordion' data-default="1" data-single='true' data-accordion-init>
                 <li class='accordion__item'>
@@ -327,7 +405,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <section class="bestsellers-section">
       <div class="container">

@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const relatedSwiper = new Swiper(relatedSlider.querySelector(".swiper-container"), {
       modules: [Pagination, EffectFade, Autoplay],
       spaceBetween: 20,
-      speed: 1600,
+      speed: 1200,
       slidesPerView: 1,
       watchOverflow: true,
       observer: true,
@@ -171,10 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
       fadeEffect: {
         crossFade: true,
       },
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
 
       pagination: {
         el: relatedSlider.querySelector(".swiper-pagination"),
