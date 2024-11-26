@@ -1,5 +1,5 @@
 .error-section{
-    margin: clamp(100px, 11.6279vw, 200px) clamp(100px, 8.7209vw, 150px);
+    margin: clamp(100px, 11.6279vw, 200px) 0 clamp(100px, 8.7209vw, 150px);
 
     &__info{
         display: flex;
@@ -11,6 +11,38 @@
             height: 64px;
             font-size: 24px;
             padding: 20px 30px;
+        }
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+    }
+
+    &__image{
+        align-self: center;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+
+        video {
+            width: 100%;
+            height: auto;
+            mask: url(#video-mask);
+            -webkit-mask: url(#video-mask);
+        
+            & + svg{
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                z-index: -1;
+                pointer-events: none;
+            }
         }
     }
 
