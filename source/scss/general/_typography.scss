@@ -27,7 +27,7 @@
   font-weight: 400;
   font-size: clamp(55px, 5.814vw, 100px);
   color: var(--cl-c);
-
+  
   &__arrow{
     display: flex;
     align-items: center;
@@ -38,6 +38,7 @@
     background: var(--bg-a);
     color: var(--cl-c);
     transition: all .4s;
+    margin-top:calc(clamp(2px, .1744vw, 3px) * -1);
 
     svg,img{
       width: clamp(33px, 3.8372vw, 66px);
@@ -68,6 +69,7 @@
       &__arrow{
         width: clamp(40px, 3.0233vw, 52px);
         height: clamp(40px, 3.0233vw, 52px);
+        margin-top:calc(clamp(1px, .1163vw, 2px) * -1);
 
         svg,img{
           transform: rotate(90deg);
@@ -89,9 +91,9 @@
     font-size: clamp(30px, 3.4884vw, 60px);
     gap: clamp(10px, .8721vw, 15px);
 
-
     .main-link{
       &__arrow{
+        margin-top:calc(clamp(2px, .2326vw, 4px) * -1);
         width: clamp(40px, 3.0233vw, 52px);
         height: clamp(40px, 3.0233vw, 52px);
 
@@ -202,6 +204,9 @@
         &::before{
           visibility: visible;
         }
+      }
+      svg,img{
+        transform: scale(1.1);
       }
     }
 }

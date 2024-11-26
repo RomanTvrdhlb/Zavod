@@ -24,9 +24,16 @@
             min-height: clamp(189px, 19.0116vw, 327px);
             height: auto;
             width: auto;
+            transition: all .3s;
         }
 
         margin-top: clamp(60px, 10.3488vw, 178px);
+
+        &:hover{
+            svg,img{
+                transform: scale(1.03);
+            }
+        }
     }
 
     &__box{
@@ -89,6 +96,7 @@
             color: rgba(255, 255, 255, 0.5);
             position: relative;
             z-index: 1;
+            margin-top: calc(clamp(1px, .1744vw, 3px) * -1);
 
             b{
                 font-size: clamp(20px, 1.4535vw, 25px);
@@ -105,6 +113,10 @@
                 top: 60%;
                 z-index: 2;
                 pointer-events: none;
+            }
+
+            @include tablet{
+                margin-top: 1px;
             }
         }
     }
@@ -129,10 +141,14 @@
         color: var(--cl-c);
         padding-right: 20%;
         margin: -10px 0 0;
-
+        transition: all .4s;
 
         @include tablet{
             line-height: 113%;
+        }
+
+        &:hover{
+            color: var(--cl-a);
         }
     }
 

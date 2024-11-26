@@ -13,18 +13,18 @@
   }
 
   .swiper-slide {
-    transition: opacity 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+    transition: opacity 1s ease-in-out;
 
-    @include for-small-tablet{
-        height: clamp(300px, 50.6977vw, 872px);
+    @include for-small-tablet {
+      height: clamp(300px, 50.6977vw, 872px);
     }
 
     @include small-tablet {
-      @include for-mobile{
-        height: Min(90.057vw , 707px);
-        border-radius: 25px;
-        overflow: hidden;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
   }
 
@@ -37,6 +37,7 @@
 
     svg {
       display: flex;
+      height: auto;
 
       @include small-tablet {
         display: none;
@@ -49,12 +50,12 @@
       height: 100%;
     }
 
-    @include for-small-tablet{
-        margin: 10px 0 0;
+    @include for-small-tablet {
+      margin: 10px 0 0;
     }
 
     @include small-tablet {
-      height: auto;
+      height: Min(92.057vw,707px);
       width: 100%;
     }
 
@@ -118,12 +119,52 @@
       transform: translate(-20%, -45%);
     }
 
-    @include small-tablet{
-        gap: clamp(5px, 1.953vw, 15px);
-        top: 50%;
-        transform: translate(-10%, -50%);
+    @include small-tablet {
+      gap: clamp(5px, 1.953vw, 15px);
+      top: 50%;
+      transform: translate(-10%, -50%);
+
+      top: calc(Min(92.057vw,707px) / 2);
+    }
+  }
+
+  p {
+    display: flex;
+    font-family: var(--font-family);
+    font-weight: 400;
+
+    color: var(--cl-c);
+    line-height: 100%;
+
+    @include for-small-tablet {
+      font-size: Min(3.125vw, 60px);
+      text-align: right;
     }
 
+    @include small-tablet {
+      font-size: clamp(25px, 3.4884vw, 60px);
+    }
 
+    @media (min-width: (1791px)) {
+      bottom: -7px;
+    }
+
+    @media (max-width: (1790px)) {
+      @include for-small-tablet {
+        bottom: 1.5%;
+      }
+    }
+
+    @include for-small-tablet {
+      max-width: Min(57.8488vw, 995px);
+      position: absolute;
+      right: 0;
+    }
+
+    @include small-tablet {
+      br {
+        display: none;
+      }
+    }
   }
 }

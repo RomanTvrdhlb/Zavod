@@ -47,6 +47,7 @@
             @media (min-width: (1915px)) {
                 transform: translate(100%, -50%);
                 right: -10px;
+                background: transparent;
             }
         }
 
@@ -60,6 +61,7 @@
 
             
             @media (min-width: (1915px)) {
+                background: transparent;
                 transform: translate(-100%, -50%);
                 left: -10px;
             }

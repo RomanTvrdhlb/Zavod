@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
       observer: true,
       observeParents: true,
       speed: 5000,
+      simulateTouch: false,
+      mousewheel: false,
+      keyboard: false,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
@@ -51,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modules: [Navigation, Pagination],
       spaceBetween: 20,
       slidesPerView: 4,
-      speed: 1800,
+      speed: 1400,
       watchOverflow: true,
       observer: true,
       observeParents: true,

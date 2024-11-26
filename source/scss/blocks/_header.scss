@@ -6,35 +6,20 @@
   top: 0;
   padding: clamp(15px, 1.1628vw, 20px) 0;
   background: var(--bg-b);
+  transition: 0.3s;
 
   &.sticky {
-    @include for-tablet {
-      transition: transform 0.3s ease-in-out;
-    }
+    padding: clamp(15px, 1.7442vw, 30px) 0;
 
     @include tablet {
-      transform: translate(0) !important;
       padding: clamp(15px, 1.7442vw, 30px) 0;
     }
 
-    &.scroll-up {
-      transform: translateY(-110%);
-    }
-
-    &.return-to-place {
-      padding: clamp(15px, 1.7442vw, 30px) 0;
-      transform: translateY(0);
-
-      .logo {
-        @include for-tablet{
-          width: clamp(130px, 10.3488vw, 178px);
-          height: clamp(52px, 4.0698vw, 70px);
-          transition: 0s;
-        }
-      }
-
-      @include for-tablet {
-        transition: transform 0.5s ease-in-out;
+    .logo {
+      @include for-tablet{
+        width: clamp(130px, 10.3488vw, 178px);
+        height: clamp(52px, 4.0698vw, 70px);
+     
       }
     }
   }
@@ -186,6 +171,6 @@
   }
 
   .logo{
-    transition: 0.4s;
+    transition: 0.3s ease;
   }
 }
