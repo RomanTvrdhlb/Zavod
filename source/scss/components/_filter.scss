@@ -125,7 +125,7 @@
         background: var(--bg-d);
         padding: clamp(20px, 2.907vw, 50px);
         border-radius: 25px;
-        border-radius: 3px 3px 2px 0 rgba(0, 0, 0, 0.08);
+        box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.08);
         width: clamp(340px, 27.7907vw, 478px);
 
         @media (max-width: (385px)) {
