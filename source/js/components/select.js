@@ -53,7 +53,8 @@ if (select.length) {
 
       removeClassInArray(items, 'active');
       items.forEach(function (item) {item.style.display = "flex"});
-      
+      item.classList.contains('sort-select') ? addCustomClass(currentItem, 'active') : '';
+
       if (isSelectOpen) {
         closeSelect(selectBody, item);
       } else {
