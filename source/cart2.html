@@ -121,14 +121,14 @@
                   </button>
                 </div>
               </li>
-              <li class="card-list__item promo">
+              <li class="card-list__item add">
                 <span class="card-list__discount">
                   <svg width='35' height='35'>
                     <use href='img/sprite/sprite.svg#chart'></use>
                   </svg>
                   ВИГІДНА ПРОПОЗИЦІЯ
                 </span>
-                <div class="card card--order discount">
+                <div class="card card--order">
                   <div class="card__image">
                     <picture>
                       <source type='image/webp' srcset='img/catalog/Apps-Classic.webp'>
@@ -168,17 +168,14 @@
                     <span class="card__price">720<i>₴</i></span>
                   </div>
 
-                  <button class="card__btn add">
+                  <button class="card__btn">
                     <svg width='28' height='28'>
-                      <use href='img/sprite/sprite.svg#search2'></use>
+                      <use href='img/sprite/sprite.svg#close'></use>
                     </svg>
                   </button>
                 </div>
               </li>
-              <li class="card-list__item info">
-                <p>Додайте до Вашого кошика додаткові товари та отримайте <b>знижку на все замовлення</b></p>
-              </li>
-              <li class="card-list__item">
+              <li class="card-list__item add">
                 <div class="card card--order discount">
                   <div class="card__image">
                     <picture>
@@ -220,12 +217,15 @@
                     <span class="card__percent">40%</span>
                   </div>
 
-                  <button class="card__btn add">
+                  <button class="card__btn">
                     <svg width='28' height='28'>
-                      <use href='img/sprite/sprite.svg#search2'></use>
+                      <use href='img/sprite/sprite.svg#close'></use>
                     </svg>
                   </button>
                 </div>
+              </li>
+              <li class="card-list__item info">
+                <p>Додайте до Вашого кошика додаткові товари та отримайте <b>знижку на все замовлення</b></p>
               </li>
               <li class="card-list__item">
                 <div class="card card--order discount">
@@ -411,7 +411,10 @@
               </div>
             </div>
 
-            <button class="black-btn">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+            <div class="cart-form__bottom">
+              <button class="cart-form__btn">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+              <p>*Мінімальна сума замовлення 500 гривень</p>
+            </div>
           </form>
 
           <div class="cart-section__aside">
@@ -425,6 +428,10 @@
                 </li>
                 <li class="cart-section__review-row">
                   <p>Знижка %</p>
+                  <span class="sale-total">20 грн.</span>
+                </li>
+                <li class="cart-section__review-row sale">
+                  <p>Знижка на все замовлення</p>
                   <span class="sale-total">20 грн.</span>
                 </li>
               </ul>

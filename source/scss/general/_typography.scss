@@ -158,6 +158,7 @@
       opacity: 0;
       visibility: hidden;
       transition: all .4s;
+      max-height: 62px;
 
       &::before{
         position: absolute;
@@ -203,6 +204,16 @@
         }
       }
     }
+}
+
+.header.sticky{
+  .main-phone__wrapp{
+    transform: translateY(calc(clamp(15px, 1.7442vw, 30px) - clamp(15px, 1.1628vw, 20px)));
+  }
+
+  .search-wrapper{
+    transform: translateY(calc(clamp(15px, 1.7442vw, 30px) - clamp(15px, 1.1628vw, 20px)));
+  }
 }
 
 .search-wrapper{

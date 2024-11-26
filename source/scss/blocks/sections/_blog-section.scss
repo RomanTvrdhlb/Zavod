@@ -37,6 +37,17 @@
     @include small-tablet{
       grid-template-columns: 100%;
     }
+
+    &.catalog{
+
+      @include tablet{
+        @include for-mobile{
+          .blog-section__post:first-of-type{
+            order: initial;
+          }
+        }
+      }
+    }
   }
 
   &__post{

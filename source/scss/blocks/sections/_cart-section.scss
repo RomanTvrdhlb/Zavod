@@ -3,30 +3,91 @@
 
   &__title {
     margin-bottom: clamp(20px, 4.883vw, 50px);
+    line-height: 100%;
   }
 
   &__box {
     display: grid;
-    gap: 100px clamp(20px, 2.083vw, 40px);
+    gap: clamp(100px, 8.7209vw, 150px) clamp(20px, 2.083vw, 40px);
 
-    @include for-tablet{
-      grid-template-columns: 1fr clamp(440px, 30.208vw, 580px);
+    @include for-laptop{
+      grid-template-columns: 1fr clamp(440px, 32.5581vw, 560px);
     }
 
-    @include tablet{
+    @include laptop{
       grid-template-columns: 100%;
     }
   }
 
-  &__wrapp {
-    @include for-tablet{
-      display: flex;
-      flex-direction: column;
-      gap: 180px;
+  &__orders{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(30px, 2.907vw, 50px);
+
+    .white-btn{
+      font-size: clamp(20px, 2.3256vw, 40px);
+      height: clamp(60px, 5.814vw, 100px);
+      padding: clamp(20px, 1.7442vw, 30px) clamp(30px, 5vw, 86px);
+      align-self: center;
+  
+      @include mobile{
+        padding: clamp(20px, 1.7442vw, 30px) 10px;
+      }
     }
 
-    @include tablet{
-      display: contents;
+    .card-list{
+      &__item{
+        padding: 10px 0;
+
+        &:first-of-type{
+            padding: 0 0 10px;
+        }
+
+        @include mobile{
+          width: calc(100% + (var(--container-offset) * 2));
+          margin: 0 calc(var(--container-offset) * -1);
+          padding: 10px var(--container-offset) !important;
+          border: none;
+          &::before{
+            width: calc(100% - (var(--container-offset) * 2));
+          }
+        }
+
+        &.add{
+          @include mobile{
+            &::before{
+              width: 100%;
+            }
+          }
+        }
+
+        // &.promo{
+        //   @include mobile{
+        //     &::before{
+        //       width: 100%;
+        //     }
+        //   }
+        // }
+
+        &.info{
+          @include mobile{
+            margin-top: 10px;
+            &::before{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    @include laptop{
+      order: 1;
+    }
+  }
+
+  .cart-form{
+    @include laptop{
+      order: 3;
     }
   }
 
@@ -34,18 +95,44 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include for-laptop{
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    @include laptop{
+      order: 2;
+    }
   }
 
   &__download {
-    margin-left: auto;
+    @include for-mobile{
+      margin-left: auto;
+    }
+
+    padding: 9px clamp(15px, 1.7442vw, 30px);
+    height: clamp(40px, 3.7209vw, 64px);
+    font-size: clamp(20px, 1.3953vw, 24px);
   }
 
   &__totals {
     background-color: var(--bg-d);
     border-radius: 25px;
 
-    @include for-small-tablet{
+    @include for-tablet{
       padding: 20px clamp(10px, 1.042vw, 20px);
+    }
+
+    @include tablet{
+      padding: 20px;
+    }
+
+    @include mobile{
+      border-radius: 0;
+      width: calc(100% + (var(--container-offset) * 2));
+      margin: 0 calc(var(--container-offset) * -1);
+      padding: 20px var(--container-offset);
     }
   }
 
@@ -98,10 +185,19 @@
     }
 
     span {
-      font-size: 48px;
+      font-size: clamp(36px, 2.7907vw, 48px);
       line-height: 112%;
       font-weight: 500;
       color: var(--cl-m);
+
+      @include mobile{
+        line-height: 100%;
+        font-size: 20px;
+      }
+    }
+
+    @include mobile{
+      margin-bottom: 10px;
     }
   }
 
@@ -114,17 +210,19 @@
     gap: 20px;
 
     svg {
+      width: clamp(27px, 1.6279vw, 28px);
+      height: clamp(27px, 1.6279vw, 28px);
       fill: transparent;
     }
 
     p {
-      font-size: 18px;
+      font-size: clamp(14px, 1.0465vw, 18px);
       line-height: 112%;
       font-weight: 400;
       color: var(--cl-m);
 
       span {
-        font-size: 20px;
+        font-size:  clamp(14px, 1.1628vw, 20px);
         font-weight: 500;
         color: var(--cl-m);
       }
@@ -139,9 +237,16 @@
     line-height: 150%;
     font-weight: 400;
     color: var(--cl-m);
-
+    transition: all .3s;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
     svg {
       fill: transparent;
+    }
+
+    &:hover{
+      text-decoration-color: inherit;
     }
   }
 }
