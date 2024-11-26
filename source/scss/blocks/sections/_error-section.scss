@@ -34,9 +34,30 @@
         align-items: center;
         justify-content: center;
 
+        svg{
+            height: clamp(190px, 39.2442vw, 675px);
+        }
+
         video {
             width: 100%;
             height: clamp(190px, 39.2442vw, 675px);
+        }
+
+        img{
+            display: none;
+            width: 100%;
+            height: clamp(190px, 39.2442vw, 675px);
+            object-fit: contain;
+        }
+
+        &.safari-fallback{
+            svg,video{
+                display: none;
+            }
+
+            img{
+                display: block;
+            }
         }
     }
 

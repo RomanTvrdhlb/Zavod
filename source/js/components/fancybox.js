@@ -7,3 +7,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
         Fancybox.bind('[data-fancybox]', {});
     }
 })
+
+if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+    const errorImage = document.querySelector('.error-section__image');
+    if (errorImage) {
+      errorImage.classList.add('safari-fallback');
+    }
+  }
+  
