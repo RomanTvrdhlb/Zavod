@@ -2,9 +2,12 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  z-index: 1;
   gap: clamp(10px, 1.1628vw, 20px);
 
   &__image{
+    cursor: pointer;
     position: relative;
     padding: 0 clamp(8px, 1.1628vw, 20px) clamp(8px, 1.1628vw, 20px);
     margin-top: clamp(60px, 10.3488vw, 178px);
@@ -26,6 +29,15 @@
       min-height: clamp(189px, 19.0116vw, 327px);
       height: auto;
       width: auto;
+      transition: all .3s;
+    }
+  }
+
+  &:hover{
+    .catalog-card__image{
+      img,picture{
+        transform: scale(1.02);
+      }
     }
   }
 
@@ -39,6 +51,7 @@
     line-height: 100%;
     font-weight: 500;
     color: var(--cl-m);
+    z-index: 3;
 
     @include for-mobile{
       top: clamp(10px, 1.953vw, 20px);
@@ -66,6 +79,17 @@
     @include tablet{
       line-height: 137%;
     }
+
+    @include for-mobile{
+      height: 25px;
+      white-space: nowrap;
+  }
+
+  @include mobile{
+      height: 25px;
+      max-width: 95%;
+      white-space: normal;
+  }
   }
 
   &__series{
@@ -74,9 +98,17 @@
     line-height: 108%;
     font-weight: 500;
     color: var(--cl-c);
+    transition: all .3s;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    width: fit-content;
 
     @include tablet{
         line-height: 113%;
+    }
+
+    &:hover{
+      text-decoration-color: inherit;
     }
   }
 
@@ -84,6 +116,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    min-height: 58px;
   }
 
   &__text{

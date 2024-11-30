@@ -1,10 +1,12 @@
 .filter{
     position: absolute;
-    z-index: 20;
+    z-index: 25;
     left: 0;
     top: -2px;
     display: flex;
     flex-direction: column;
+    height: 50px;
+    width: 50px;
 
     @include tablet{
         top: -4px;
@@ -59,7 +61,7 @@
                     transition: all .3s;
 
                     &:hover{
-                        text-decoration-color: inherit;
+                        color: var(--cl-a);
                     }
                 }
             }
@@ -127,6 +129,7 @@
         border-radius: 25px;
         box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.08);
         width: clamp(340px, 27.7907vw, 478px);
+        height: fit-content;
 
         @media (max-width: (385px)) {
             width: 100%;

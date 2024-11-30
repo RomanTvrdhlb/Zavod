@@ -6,6 +6,7 @@
   @include('partials/header.html')
 
   <main>
+
     <section class="hero-section">
       <div class="container">
         <div class="hero-section__box">
@@ -15,123 +16,110 @@
               <ul class='swiper-wrapper'>
                 <li class='swiper-slide'>
                   <div class="hero-slider__image">
-                    <svg viewBox="0 0 1730 882" width="100%" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <clipPath id="clip">
-                          <path
-                            d="M5 307V823C5 850.614 27.3858 873 55 873H691.286C718.9 873 741.286 850.614 741.286 823V797C741.286 769.386 763.672 747 791.286 747H803.253C830.868 747 853.253 724.614 853.253 697V683.5C853.253 655.886 875.639 633.5 903.253 633.5H1160.9C1181.48 633.5 1198.15 616.823 1198.15 596.25C1198.15 575.677 1214.83 559 1235.4 559H1675C1702.61 559 1725 536.614 1725 509V404.245C1725 394.721 1717.28 387 1707.76 387C1698.23 387 1690.51 379.279 1690.51 369.755V188.245C1690.51 178.721 1698.23 171 1707.76 171C1717.28 171 1725 163.279 1725 153.755V51C1725 23.3858 1702.61 1 1675 1H956.738C929.124 1 906.738 23.3858 906.738 51V106.5C906.738 134.114 884.352 156.5 856.738 156.5H404.898C377.284 156.5 354.898 179.136 354.898 206.75C354.898 234.364 332.513 257 304.898 257H55C27.3858 257 5 279.386 5 307Z" />
-                        </clipPath>
-                      </defs>
-                      <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/index/hero-bg.png" width="100%" height="100%" clip-path="url(#clip)"
-                        preserveAspectRatio="xMidYMid slice" />
-                    </svg>
-
-                    <svg viewBox="0 0 773 762" xmlns="http://www.w3.org/2000/svg" style="width: 100%;" class="hero-slider__image-mob">
-                      <defs>
-                        <clipPath id="clip-mobile">
-                          <path
-                            d="M747 1H26C12.193 1 1 12.193 1 26v710c0 13.807 11.193 25 25 25h721c13.807 0 25-11.193 25-25V512.61c0-12.524-10.153-22.677-22.676-22.677-12.524 0-22.677-10.152-22.677-22.676V297.276c0-12.523 10.153-22.676 22.677-22.676 12.523 0 22.676-10.153 22.676-22.676V26c0-13.807-11.193-25-25-25Z" />
-                        </clipPath>
-                      </defs>
-                        <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/index/hero-bg.png" width="773" height="762" clip-path="url(#clip-mobile)"
-                        preserveAspectRatio="none" />
-                    </svg>
+                    <picture>
+                      <source type='image/webp' srcset='img/index/hero-bg.webp'>
+                      <img width='1730' height='882' src='img/index/hero-bg.png' alt='image'>
+                    </picture>
                   </div>
-                  <p>ЄВРОПЕЙСЬКА<br> КОМПАНІЯ З ДИНАМІЧНИМ РОЗВИТКОМ, ЯКА ЗАДАЄ<br> ТРЕНДИ НА РИНКУ ПРОДУКТІВ ХАРЧУВАННЯ ТА
-                    НАПОЇВ
-                  </p>
+                  <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 29 -9"
+                          result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                      </filter>
+                    </defs>
+                  </svg>
+
+                  <div class="text">
+                    <div class="goo" contenteditable="true"><span>ЄВРОПЕЙСЬКА</span><br>
+                      <span>КОМПАНІЯ З ДИНАМІЧНИМ</span><br>
+                      <span><i></i>РОЗВИТКОМ, ЯКА ЗАДАЄ3</span><br>
+                      <span>ТРЕНДИ НА РИНКУ ПРОДУКТІВ</span><br>
+                      <span><i></i>ХАРЧУВАННЯ ТА НАПОЇВ</span></div>
+                  </div>
                 </li>
                 <li class='swiper-slide'>
                   <div class="hero-slider__image">
-                    <svg viewBox="0 0 1730 882" width="100%" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <clipPath id="clip">
-                          <path
-                            d="M5 307V823C5 850.614 27.3858 873 55 873H691.286C718.9 873 741.286 850.614 741.286 823V797C741.286 769.386 763.672 747 791.286 747H803.253C830.868 747 853.253 724.614 853.253 697V683.5C853.253 655.886 875.639 633.5 903.253 633.5H1160.9C1181.48 633.5 1198.15 616.823 1198.15 596.25C1198.15 575.677 1214.83 559 1235.4 559H1675C1702.61 559 1725 536.614 1725 509V404.245C1725 394.721 1717.28 387 1707.76 387C1698.23 387 1690.51 379.279 1690.51 369.755V188.245C1690.51 178.721 1698.23 171 1707.76 171C1717.28 171 1725 163.279 1725 153.755V51C1725 23.3858 1702.61 1 1675 1H956.738C929.124 1 906.738 23.3858 906.738 51V106.5C906.738 134.114 884.352 156.5 856.738 156.5H404.898C377.284 156.5 354.898 179.136 354.898 206.75C354.898 234.364 332.513 257 304.898 257H55C27.3858 257 5 279.386 5 307Z" />
-                        </clipPath>
-                      </defs>
-                      <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/articles/article1.png" width="100%" height="100%" clip-path="url(#clip)"
-                        preserveAspectRatio="xMidYMid slice" />
-                    </svg>
-
-                    <svg viewBox="0 0 773 762" xmlns="http://www.w3.org/2000/svg" style="width: 100%;" class="hero-slider__image-mob">
-                      <defs>
-                        <clipPath id="clip-mobile">
-                          <path
-                            d="M747 1H26C12.193 1 1 12.193 1 26v710c0 13.807 11.193 25 25 25h721c13.807 0 25-11.193 25-25V512.61c0-12.524-10.153-22.677-22.676-22.677-12.524 0-22.677-10.152-22.677-22.676V297.276c0-12.523 10.153-22.676 22.677-22.676 12.523 0 22.676-10.153 22.676-22.676V26c0-13.807-11.193-25-25-25Z" />
-                        </clipPath>
-                      </defs>
-                        <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/articles/article1.png" width="773" height="762" clip-path="url(#clip-mobile)"
-                        preserveAspectRatio="none" />
-                    </svg>
+                    <picture>
+                      <source type='image/webp' srcset='img/index/hero-bg.webp'>
+                      <img width='1730' height='882' src='img/index/hero-bg.png' alt='image'>
+                    </picture>
                   </div>
-                  <p>ЄВРОПЕЙСЬКА<br> КОМПАНІЯ З ДИНАМІЧНИМ РОЗВИТКОМ, ЯКА ЗАДАЄ<br> ТРЕНДИ НА РИНКУ ПРОДУКТІВ ХАРЧУВАННЯ ТА
-                    НАПОЇВ1
-                  </p>
+                  <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 29 -9"
+                          result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                      </filter>
+                    </defs>
+                  </svg>
+
+                  <div class="text">
+                    <div class="goo" contenteditable="true"><span>ЄВРОПЕЙСЬКА</span><br>
+                      <span>КОМПАНІЯ З ДИНАМІЧНИМ2</span><br>
+                      <span><i></i>РОЗВИТКОМ, ЯКА ЗАДАЄ</span><br>
+                      <span><i></i>ХАРЧУВАННЯ ТА НАПОЇВ</span></div>
+                  </div>
                 </li>
                 <li class='swiper-slide'>
                   <div class="hero-slider__image">
-                    <svg viewBox="0 0 1730 882" width="100%" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <clipPath id="clip">
-                          <path
-                            d="M5 307V823C5 850.614 27.3858 873 55 873H691.286C718.9 873 741.286 850.614 741.286 823V797C741.286 769.386 763.672 747 791.286 747H803.253C830.868 747 853.253 724.614 853.253 697V683.5C853.253 655.886 875.639 633.5 903.253 633.5H1160.9C1181.48 633.5 1198.15 616.823 1198.15 596.25C1198.15 575.677 1214.83 559 1235.4 559H1675C1702.61 559 1725 536.614 1725 509V404.245C1725 394.721 1717.28 387 1707.76 387C1698.23 387 1690.51 379.279 1690.51 369.755V188.245C1690.51 178.721 1698.23 171 1707.76 171C1717.28 171 1725 163.279 1725 153.755V51C1725 23.3858 1702.61 1 1675 1H956.738C929.124 1 906.738 23.3858 906.738 51V106.5C906.738 134.114 884.352 156.5 856.738 156.5H404.898C377.284 156.5 354.898 179.136 354.898 206.75C354.898 234.364 332.513 257 304.898 257H55C27.3858 257 5 279.386 5 307Z" />
-                        </clipPath>
-                      </defs>
-                      <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/index/hero-bg.png" width="100%" height="100%" clip-path="url(#clip)"
-                        preserveAspectRatio="xMidYMid slice" />
-                    </svg>
-
-                    <svg viewBox="0 0 773 762" xmlns="http://www.w3.org/2000/svg" style="width: 100%;" class="hero-slider__image-mob">
-                      <defs>
-                        <clipPath id="clip-mobile">
-                          <path
-                            d="M747 1H26C12.193 1 1 12.193 1 26v710c0 13.807 11.193 25 25 25h721c13.807 0 25-11.193 25-25V512.61c0-12.524-10.153-22.677-22.676-22.677-12.524 0-22.677-10.152-22.677-22.676V297.276c0-12.523 10.153-22.676 22.677-22.676 12.523 0 22.676-10.153 22.676-22.676V26c0-13.807-11.193-25-25-25Z" />
-                        </clipPath>
-                      </defs>
-                        <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/index/hero-bg.png" width="773" height="762" clip-path="url(#clip-mobile)"
-                        preserveAspectRatio="none" />
-                    </svg>
+                    <picture>
+                      <source type='image/webp' srcset='img/index/hero-bg.webp'>
+                      <img width='1730' height='882' src='img/index/hero-bg.png' alt='image'>
+                    </picture>
                   </div>
-                  <p>ЄВРОПЕЙСЬКА<br> КОМПАНІЯ З ДИНАМІЧНИМ РОЗВИТКОМ, ЯКА ЗАДАЄ<br> ТРЕНДИ НА РИНКУ ПРОДУКТІВ ХАРЧУВАННЯ ТА
-                    НАПОЇВ2
-                  </p>
+                  <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 29 -9"
+                          result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                      </filter>
+                    </defs>
+                  </svg>
+
+                  <div class="text">
+                    <div class="goo" contenteditable="true"><span>ЄВРОПЕЙСЬКА</span><br>
+                      <span>КОМПАНІЯ З ДИНАМІЧНИМ</span><br>
+                      <span><i></i>РОЗВИТКОМ, ЯКА ЗАДАЄ3</span><br>
+                      <span>ТРЕНДИ НА РИНКУ ПРОДУКТІВ3</span>
+                    </div>
+                  </div>
                 </li>
                 <li class='swiper-slide'>
                   <div class="hero-slider__image">
-                    <svg viewBox="0 0 1730 882" width="100%" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <clipPath id="clip">
-                          <path
-                            d="M5 307V823C5 850.614 27.3858 873 55 873H691.286C718.9 873 741.286 850.614 741.286 823V797C741.286 769.386 763.672 747 791.286 747H803.253C830.868 747 853.253 724.614 853.253 697V683.5C853.253 655.886 875.639 633.5 903.253 633.5H1160.9C1181.48 633.5 1198.15 616.823 1198.15 596.25C1198.15 575.677 1214.83 559 1235.4 559H1675C1702.61 559 1725 536.614 1725 509V404.245C1725 394.721 1717.28 387 1707.76 387C1698.23 387 1690.51 379.279 1690.51 369.755V188.245C1690.51 178.721 1698.23 171 1707.76 171C1717.28 171 1725 163.279 1725 153.755V51C1725 23.3858 1702.61 1 1675 1H956.738C929.124 1 906.738 23.3858 906.738 51V106.5C906.738 134.114 884.352 156.5 856.738 156.5H404.898C377.284 156.5 354.898 179.136 354.898 206.75C354.898 234.364 332.513 257 304.898 257H55C27.3858 257 5 279.386 5 307Z" />
-                        </clipPath>
-                      </defs>
-                      <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/articles/article2.png" width="100%" height="100%" clip-path="url(#clip)"
-                        preserveAspectRatio="xMidYMid slice" />
-                    </svg>
-
-                    <svg viewBox="0 0 773 762" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;" class="hero-slider__image-mob">
-                      <defs>
-                        <clipPath id="clip-mobile">
-                          <path
-                            d="M747 1H26C12.193 1 1 12.193 1 26v710c0 13.807 11.193 25 25 25h721c13.807 0 25-11.193 25-25V512.61c0-12.524-10.153-22.677-22.676-22.677-12.524 0-22.677-10.152-22.677-22.676V297.276c0-12.523 10.153-22.676 22.677-22.676 12.523 0 22.676-10.153 22.676-22.676V26c0-13.807-11.193-25-25-25Z" />
-                        </clipPath>
-                      </defs>
-                        <!-- Картинка внутри SVG, которая обрезается через clipPath -->
-                      <image xlink:href="img/articles/article2.png" width="773" height="762" clip-path="url(#clip-mobile)"
-                        preserveAspectRatio="none" />
-                    </svg>
+                    <picture>
+                      <source type='image/webp' srcset='img/index/hero-bg.webp'>
+                      <img width='1730' height='882' src='img/index/hero-bg.png' alt='image'>
+                    </picture>
                   </div>
-                  <p>ЄВРОПЕЙСЬКА<br> КОМПАНІЯ З ДИНАМІЧНИМ РОЗВИТКОМ, ЯКА ЗАДАЄ<br> ТРЕНДИ НА РИНКУ ПРОДУКТІВ ХАРЧУВАННЯ ТА
-                    НАПОЇВ3
-                  </p>
+                  <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 29 -9"
+                          result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                      </filter>
+                    </defs>
+                  </svg>
+
+                  <div class="text">
+                    <div class="goo" contenteditable="true"><span>ЄВРОПЕЙСЬКА</span><br>
+                      <span>КОМПАНІЯ З ДИНАМІЧНИМ2</span><br>
+                      <span><i></i>РОЗВИТКОМ, ЯКА ЗАДАЄ3</span><br>
+                      <span>ТРЕНДИ НА РИНКУ ПРОДУКТІВ</span><br>
+                      <span><i></i>ХАРЧУВАННЯ ТА НАПОЇВ</span></div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -157,6 +145,9 @@
             </p>
           </div> -->
         </div>
+
+
+
       </div>
     </section>
 
@@ -692,7 +683,7 @@
               <div class='swiper-container'>
                 <ul class='swiper-wrapper'>
                   <li class='swiper-slide'>
-                    <a href="#" class="articles-card">
+                    <div class="articles-card">
                       <div class="articles-card__top">
                         <div class="articles-card__image">
                           <picture>
@@ -701,18 +692,18 @@
                           </picture>
                         </div>
                         <div class="articles-card__tags">
-                          <span class="articles-card__tag">Виробництво</span>
-                          <span class="articles-card__tag">Всі</span>
+                          <a href="#" class="articles-card__tag">Виробництво</a>
+                          <a href="#" class="articles-card__tag">Всі</a>
                         </div>
                       </div>
                       <div class="articles-card__bottom">
                         <p>Повернення легенди: натуральний лимонад Mojo представить нові екзотичні смаки</p>
                         <span class="articles-card__date">20.08.2024</span>
                       </div>
-                    </a>
+                    </div>
                   </li>
                   <li class='swiper-slide'>
-                    <a href="#" class="articles-card" style="background: #dbdcae;">
+                    <div class="articles-card" style="background: #dbdcae;">
                       <div class="articles-card__top">
                         <div class="articles-card__image">
                           <picture>
@@ -721,18 +712,18 @@
                           </picture>
                         </div>
                         <div class="articles-card__tags">
-                          <span class="articles-card__tag">Виробництво</span>
-                          <span class="articles-card__tag">Всі</span>
+                          <a href="#" class="articles-card__tag">Виробництво</a>
+                          <a href="#" class="articles-card__tag">Всі</a>
                         </div>
                       </div>
                       <div class="articles-card__bottom">
                         <p>Енергетичний напій PIT BULL відтепер і в Казакстані</p>
                         <span class="articles-card__date">20.08.2024</span>
                       </div>
-                    </a>
+                    </div>
                   </li>
                   <li class='swiper-slide'>
-                    <a href="#" class="articles-card" style="background: #eed9be;">
+                    <div class="articles-card" style="background: #eed9be;">
                       <div class="articles-card__top">
                         <div class="articles-card__image">
                           <picture>
@@ -741,15 +732,15 @@
                           </picture>
                         </div>
                         <div class="articles-card__tags">
-                          <span class="articles-card__tag">Виробництво</span>
-                          <span class="articles-card__tag">Всі</span>
+                          <a href="#" class="articles-card__tag">Виробництво</a>
+                          <a href="#" class="articles-card__tag">Всі</a>
                         </div>
                       </div>
                       <div class="articles-card__bottom">
                         <p>Повернення легенди: натуральний лимонад Mojo представить нові екзотичні смаки</p>
                         <span class="articles-card__date">20.08.2024</span>
                       </div>
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </div>

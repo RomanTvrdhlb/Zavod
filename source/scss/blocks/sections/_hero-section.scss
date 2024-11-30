@@ -14,7 +14,6 @@
       width: 100%;
       height: 100%;
       opacity: 83%;
-      // clip-path: path("M5 307V823C5 850.614 27.3858 873 55 873H691.286C718.9 873 741.286 850.614 741.286 823V797C741.286 769.386 763.672 747 791.286 747H803.253C830.868 747 853.253 724.614 853.253 697V683.5C853.253 655.886 875.639 633.5 903.253 633.5H1160.9C1181.48 633.5 1198.15 616.823 1198.15 596.25C1198.15 575.677 1214.83 559 1235.4 559H1675C1702.61 559 1725 536.614 1725 509V404.245C1725 394.721 1717.28 387 1707.76 387C1698.23 387 1690.51 379.279 1690.51 369.755V188.245C1690.51 178.721 1698.23 171 1707.76 171C1717.28 171 1725 163.279 1725 153.755V51C1725 23.3858 1702.61 1 1675 1H956.738C929.124 1 906.738 23.3858 906.738 51V106.5C906.738 134.114 884.352 156.5 856.738 156.5H404.898C377.284 156.5 354.898 179.136 354.898 206.75C354.898 234.364 332.513 257 304.898 257H55C27.3858 257 5 279.386 5 307Z");
     }
   }
 
@@ -22,7 +21,7 @@
     position: relative;
     z-index: 2;
 
-    @include small-tablet{
+    @include tablet {
       display: flex;
       flex-direction: column;
       gap: 27px;
@@ -36,11 +35,46 @@
     text-transform: uppercase;
     line-height: 100%;
 
-    @include for-small-tablet{
-      font-size: Min(8.698vw, 167px);
+    @include for-tablet {
+      font-size: clamp(95px, 8.698vw, 167px);
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        position: absolute;
+        inset: -4px -16px;
+        background: var(--bg-e);
+        border-radius: 0 0 30px 0;
+        content: "";
+        z-index: -1;
+      }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: -41px;
+        transform: translate(0%, -28%);
+        width: 50px;
+        height: 50px;
+        background: var(--bg-e);
+        content: "";
+        z-index: -1;
+        clip-path: polygon(
+          100% 0,
+          0 0,
+          0 100%,
+          50% 100%,
+          51% 89%,
+          58% 76%,
+          68% 63%,
+          81% 56%,
+          91% 51%,
+          100% 50%
+        );
+      }
     }
 
-    @include small-tablet{
+    @include tablet {
       font-size: clamp(64px, 9.7093vw, 167px);
     }
   }
@@ -51,25 +85,79 @@
     flex-direction: column;
 
     .main-link {
-      @include for-small-tablet{
-        font-size: Min(2.865vw, 55px);
+      @include for-tablet {
+        font-size: clamp(46px, 2.865vw, 55px);
+
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          position: absolute;
+          inset: -10px -16px;
+          background: var(--bg-e);
+          border-radius: 0 0 30px 0;
+          content: "";
+          z-index: -1;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: -41px;
+          transform: translate(0%, -50%);
+          width: 50px;
+          height: 50px;
+          background: var(--bg-e);
+          content: "";
+          z-index: -1;
+          clip-path: polygon(
+            100% 0,
+            0 0,
+            0 100%,
+            50% 100%,
+            51% 89%,
+            58% 76%,
+            68% 63%,
+            81% 56%,
+            91% 51%,
+            100% 50%
+          );
+        }
       }
     }
 
-    @media (max-width: (1900px)) {
-      margin-top: 15px;
-    }
-
-    @include for-small-tablet{
+    @include for-tablet {
       z-index: 5;
       max-width: Min(51.4535vw, 885px);
       position: absolute;
-      top: 0;
+      top: 0px;
       left: 0;
-      margin-top: -10px;
+
+      &:after {
+        position: absolute;
+        bottom: -35px;
+        left: -25px;
+        width: 50px;
+        height: 50px;
+        background: var(--bg-e);
+        content: "";
+        z-index: -1;
+        clip-path: polygon(
+          100% 0,
+          0 0,
+          0 100%,
+          50% 100%,
+          51% 89%,
+          58% 76%,
+          68% 63%,
+          81% 56%,
+          91% 51%,
+          100% 50%
+        );
+      }
     }
 
-    @include small-tablet{
+    @include tablet {
       order: -1;
     }
   }
@@ -85,36 +173,27 @@
       color: var(--cl-c);
       line-height: 100%;
 
-      @include for-small-tablet{
+      @include for-tablet {
         font-size: Min(3.125vw, 60px);
         text-align: right;
       }
 
-      @include small-tablet{
+      @include tablet {
         font-size: clamp(25px, 3.4884vw, 60px);
       }
     }
 
-    @media (min-width: (1791px)) {
-      bottom: -15px;
-    }
-
-    @media (max-width: (1790px)) {
-      @include for-small-tablet{
-        bottom: 1.5%;
-      }
-    }
-
-    @include for-small-tablet{
+    @include for-tablet {
       max-width: Min(57.8488vw, 995px);
       position: absolute;
       right: 0;
+      bottom: 0;
     }
 
-    @include small-tablet{
+    @include tablet {
       margin-top: 6px;
 
-      br{
+      br {
         display: none;
       }
     }

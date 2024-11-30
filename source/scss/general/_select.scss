@@ -207,8 +207,18 @@
       gap: 5px;
   
       & > svg {
-        transition: transform 0.2s linear;
+        transition: all .3s;
         flex-shrink: 0;
+      }
+
+      &:hover{
+        .select__current{
+          color: var(--cl-a);
+        }
+
+        & > svg {
+          filter: brightness(100);
+        }
       }
     }
   
@@ -228,7 +238,7 @@
   
     &__body {
       top: calc(100% + 4px);
-      min-width: 110px;
+      min-width: 135px;
       flex-grow: 0;
   
       &::before {
@@ -259,6 +269,8 @@
       white-space: nowrap;
 
       &:hover{
+        padding-left: 5px;
+        background: var(--cl-b);
         color: var(--cl-a);
       }
     }

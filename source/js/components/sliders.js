@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 import vars from "../_vars.js";
-import { Navigation, Pagination, EffectCards, Autoplay, EffectFade } from "swiper/modules";
+import { Navigation, Pagination, EffectCards, Autoplay, EffectFade} from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
   const { marqueSliders, bestSliders, articlesSlider, heroSlider, relatedSlider} = vars;
@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       observer: true,
       observeParents: true,
       loop: true,
+      autoHeight: true,
       effect: "fade",
       fadeEffect: {
         crossFade: true,

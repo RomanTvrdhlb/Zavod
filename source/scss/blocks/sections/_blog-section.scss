@@ -144,20 +144,21 @@
   }
 
   &__tag {
-    padding: 10px clamp(10px, 0.872vw, 15px);
-    background-color: var(--bg-a);
-    border-radius: 8px;
-    font-size: clamp(20px, 1.453vw, 25px);
-    line-height: 100%;
-    font-weight: 400;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    &.active,
-    &:hover {
-      background-color: var(--cl-m);
-      color: var(--cl-a);
+    button, a{
+      padding: 10px clamp(10px, 0.872vw, 15px);
+      background-color: var(--bg-a);
+      border-radius: 8px;
+      font-size: clamp(20px, 1.453vw, 25px);
+      line-height: 100%;
+      font-weight: 400;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.3s;
+     
+      &:hover {
+        background-color: var(--cl-m);
+        color: var(--cl-a);
+      }
     }
   }
 }

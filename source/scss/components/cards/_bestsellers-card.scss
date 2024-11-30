@@ -47,6 +47,7 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
+        height: 57px;
     }
 
     &__inner{
@@ -71,6 +72,9 @@
         gap: clamp(15px, 1.1628vw, 20px);
         flex-grow: 1;
         margin-top: 3px;
+
+        height: 28px;
+        white-space: nowrap;
     }
 
     &__value{
@@ -81,7 +85,8 @@
         color: var(--cl-b);
         height: fit-content;
 
-        b{
+        b,i{
+            font-style: normal;
             font-weight: 500;
             font-size: clamp(20px, 1.7442vw, 30px);
         }
@@ -110,7 +115,7 @@
                 height: 1px;
                 left: 0;
                 transform: translateY(-50%);
-                top: 60%;
+                top: 50%;
                 z-index: 2;
                 pointer-events: none;
             }
@@ -127,6 +132,9 @@
         font-size: clamp(19px, 1.3953vw, 24px);
         line-height: 108%;
         color: var(--cl-a);
+
+        height: 26px;
+        white-space: nowrap;
 
         @include tablet{
             line-height: 137%;
@@ -145,6 +153,17 @@
 
         @include tablet{
             line-height: 113%;
+        }
+
+        @include for-mobile{
+            height: 25px;
+            white-space: nowrap;
+        }
+
+        @include mobile{
+            height: 52px;
+            max-width: 95%;
+            white-space: normal;
         }
 
         &:hover{

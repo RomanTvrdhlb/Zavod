@@ -17,6 +17,7 @@
         padding: 20px 20px;
         border-bottom: solid 1px var(--br-b);
         align-items: center;
+        transition: all .3s;
 
         .black-btn{
             justify-self: flex-end;
@@ -47,6 +48,30 @@
         @include mobile{
             grid-template-columns: .49fr .4fr .5fr;
             padding: 20px 0;
+        }
+
+        position: relative;
+        z-index: 1;
+
+        &::before{
+            position: absolute;
+            z-index: -1;
+            background: #d8d3cf;
+            inset: 0;
+            content: '';
+            transition: all .3s;
+            opacity: 0;
+            pointer-events: none;
+
+            @include mobile{
+                inset: 0 calc(var(--container-offset) * -1);
+            }
+        }
+
+        &:hover{
+            &::before{
+                opacity: 1;
+            }
         }
     }
 
