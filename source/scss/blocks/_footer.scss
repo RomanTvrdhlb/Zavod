@@ -50,6 +50,35 @@
           border-bottom: none;
         }
       }
+
+      a{
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        transition: all .3s;
+
+        &::before{
+          background: #fff;
+          pointer-events: none;
+          opacity: 0;
+          transition: all .3s;
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: calc(clamp(10px, 1.367vw, 14px) * -1);
+          width: 100%;
+          bottom: calc(clamp(10px, 1.367vw, 14px) * -1);
+        }
+
+        &:hover{
+            &::before{
+              opacity: 1;
+            }
+            color: var(--cl-b);
+        }
+      }
+
+   
     }
 
     &-link {
@@ -81,6 +110,35 @@
         &:last-child {
           padding-bottom: 0;
           border-bottom: none;
+        }
+
+        a{
+          width: 100%;
+          position: relative;
+          z-index: 1;
+          transition: all .3s;
+
+          &::before{
+            background: #fff;
+            pointer-events: none;
+            opacity: 0;
+            transition: all .3s;
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: calc(clamp(10px, 1.367vw, 14px) * -1);
+            width: 100%;
+            bottom: calc(clamp(10px, 1.367vw, 14px) * -1);
+          }
+        }
+
+        &:hover{
+          a{
+            &::before{
+              opacity: 1;
+            }
+            color: var(--cl-b);
+          }
         }
       }
 
@@ -170,6 +228,11 @@
       font-weight: 400;
       color: var(--cl-a);
       text-decoration: underline;
+      transition: all .3s;
+
+      &:hover{
+        text-decoration-color: transparent;
+      }
     }
   }
 
@@ -186,6 +249,11 @@
     font-weight: 400;
     color: var(--cl-a);
     text-decoration: underline;
+    transition: all .3s;
+
+    &:hover{
+      text-decoration-color: transparent;
+    }
   }
 
   &__copyright {
@@ -200,6 +268,8 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    transition: all .3s;
+    width: fit-content;
 
     @include for-mobile {
       grid-column: 1;
@@ -212,6 +282,12 @@
       font-weight: 400;
       color: rgba(255, 255, 255, 0.5);
       text-decoration: underline;
+    }
+
+    &:hover{
+      p{
+        color: var(--cl-a);
+      }
     }
   }
 
