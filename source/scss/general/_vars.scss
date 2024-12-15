@@ -1,19 +1,13 @@
 :root {
   // --------------- default global variables ---------------
-  // --error-bg: #d01f1f;
   --body-bg: #CBCBCB;
   --body-bg-product: #FAE1A0;
   --body-font-size: 16px;
   --content-width: 1720px;
-
   --content-width-mode: 1920px;
   --content-width-mini: 952px;
-
   --container-offset: clamp(25px, 2.907vw, 50px);
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
-  // --container-width-mode: calc(var(--content-width-mode) + (var(--container-offset) * 2));
-  // --container-width-mini: calc(var(--content-width-mini) + (var(--container-offset) * 2));
 
   // --------------- default scroll variables ---------------
   --scrollbar-thumb:  #dbdcae;
@@ -61,24 +55,17 @@
   --bg-j: #4d4d4d; // var(--bg-j);
   --bg-k: #dbdbdb; // var(--bg-k);
   --bg-l: #dbdcae; // var(--bg-l);
-
-  
   --bg-m: #eed9be; // var(--bg-m);
 
   // --------------- default border color variable ---------------
   --br-a: #fff; // var(--br-a);
   --br-b: #000; // var(--br-b);
-
-
   --br-c: #211C29; // var(--br-c);
   --br-d: #B9FF66; // var(--br-d);
   --br-e: #cfffd6; // var(--br-e);
   --br-f: #41394d; // var(--br-f);
   --br-g: #413b53; // var(--br-g);
   --br-h: #000000; // var(--br-h);
-
- // --------------- loader variable -------------------------------
- --loader: linear-gradient(90deg, #7FFF92 0%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 5%, #FEFAE9 10%); // var(--loader);
 }
 
 

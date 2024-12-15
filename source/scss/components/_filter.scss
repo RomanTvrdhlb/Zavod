@@ -153,6 +153,12 @@
                 box-shadow: none !important;
             }
         }
+
+        overflow-y: auto;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
 
@@ -162,6 +168,9 @@
         left: 5%;
         top: calc(var(--header-height) + 30px);
 
+        max-height: calc(100dvh - var(--header-height) - 50px);
+      
+       
 
         .filter{
             &__btn{

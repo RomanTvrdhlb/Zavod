@@ -22,7 +22,18 @@
     gap: 10px;
 
     svg {
+      transition: all .3s;
       fill: transparent;
+    }
+
+   
+  }
+
+  &__link{
+    &:hover{
+      svg{
+        transform: scale(1.1);
+      }
     }
   }
 }

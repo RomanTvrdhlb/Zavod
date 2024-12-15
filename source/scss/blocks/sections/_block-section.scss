@@ -8,6 +8,10 @@
     position: relative;
     z-index: 2;
     margin-bottom: 50px;
+
+    @include mobile{
+      padding-top: 10px;
+    }
   }
 
   &__video{
@@ -80,13 +84,10 @@
     margin-bottom: 100px;
 
     svg,img{
+      flex-shrink: 0;
       transition: all .3s;
       width: clamp(80px, 7.2674vw, 125px);
       height: clamp(80px, 7.2674vw, 125px);
-
-      @include mobile{
-        margin-bottom: -6px;
-      }
     }
 
     &:hover{
@@ -120,8 +121,10 @@
     font-size: clamp(35px, 5.814vw, 100px);
     color: var(--cl-m);
 
-    @include mobile{
+    @include small-tablet{
+      font-family: var(--font-family);
       font-weight: 400;
+      line-height: 101%;
     }
   }
 
@@ -142,16 +145,24 @@
   }
 
   &__label{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateY(-100%);
     font-family: var(--font-family);
     font-weight: 500;
     font-size: clamp(18px, 1.3953vw, 24px);
     line-height: 112%;
     color: var(--cl-b);
     z-index: 3;
+
+    @include for-small-tablet{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(-100%);
+    }
+
+    @include small-tablet{
+      margin-top: -50px;
+      text-align: end;
+    }
   }
 
   &__content {
@@ -163,8 +174,8 @@
       top: 0;
 
       svg {
-        width: clamp(69px, 14.063vw, 144px);
-        height: clamp(61px, 12.5vw, 128px);
+        width: clamp(69px, 7.579vw, 144px);
+        height: clamp(61px, 6.737vw, 128px);
       }
     }
 
@@ -176,14 +187,29 @@
       font-weight: 700;
       color: var(--cl-m);
       text-transform: uppercase;
+      width:  calc(100% - 15px - clamp(80px, 7.2674vw, 125px));
+
+      @include small-tablet{
+        font-family: var(--font-family);
+        font-weight: 400;
+        line-height: 101%;
+
+        @media (min-width: (535px)) {
+          padding-bottom: 10px;
+        }
+      }
     }
 
     h2 {
       margin: clamp(30px, 4.883vw, 50px) 0 30px;
-      font-size: clamp(24px, 5.859vw, 60px);
+      font-size: clamp(24px, 3.488vw, 60px);
       line-height: 108%;
       font-weight: 400;
       color: var(--cl-m);
+
+      @include small-tablet{
+        line-height: 105%;
+      }
 
       a {
         font-weight: 500;
@@ -197,6 +223,10 @@
       text-transform: uppercase;
       color: var(--cl-m);
       margin-bottom: 30px;
+      
+      @include mobile{
+        line-height: 101%;
+      }
     }
 
     p {
@@ -204,10 +234,46 @@
       width: 100%;
       font-size: clamp(22px, 2.344vw, 24px);
       line-height: 112%;
+
+      @include mobile{
+        line-height: 120%;
+      }
     }
 
     p + p {
       margin-top: 20px;
+
+      @include mobile{
+        margin-top: 10px;
+      }
+    }
+
+    p + h2 {
+      @include mobile{
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &--mode{
+
+    // .alert-icon {
+    //   @include tablet{
+    //     svg {
+    //       width: 69px;
+    //       height: 61px;
+    //     }
+    //   }
+    // }
+
+    h2 {
+      margin: clamp(30px, 4.883vw, 50px) 0;
+    }
+
+    p + p {
+      @include mobile{
+        margin-top: 20px;
+      }
     }
   }
 }

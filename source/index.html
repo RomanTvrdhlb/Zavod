@@ -138,16 +138,7 @@
               КАТАЛОГ
             </a>
           </div>
-
-          <!-- <div class="hero-section__bottom">
-            <p>ЄВРОПЕЙСЬКА<br> КОМПАНІЯ З ДИНАМІЧНИМ РОЗВИТКОМ, ЯКА ЗАДАЄ<br> ТРЕНДИ НА РИНКУ ПРОДУКТІВ ХАРЧУВАННЯ ТА
-              НАПОЇВ
-            </p>
-          </div> -->
         </div>
-
-
-
       </div>
     </section>
 
@@ -158,7 +149,7 @@
 
           <ul class="info-list">
             <li class="info-list__item">
-              <div class="info-card">
+              <div class="info-card" data-tabs-parrent>
                 <div class="info-card__top">
                   <a href="#" class="info-card__title">BEER</a>
                   <span class="info-card__icon">
@@ -169,19 +160,30 @@
                 </div>
 
                 <div class="info-card__wrapp">
-                  <button class="info-card__text">Українські 19 брендів</button>
-                  <button class="info-card__text">Світові 12 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="1">Українські 19 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="2">Світові 12 брендів</button>
                 </div>
 
-                <div class="info-card__labels">
-                  <a href="#" class="info-card__label">ZHASHKIVSKY KABAN™</a>
-                  <a href="#" class="info-card__label">HAISENBERG™</a>
-                  <a href="#" class="info-card__label">ZHASHKIVSKE™</a>
-                </div>
+                <ul class="info-card__content">
+                  <li class="info-card__item active" data-tab-content="1">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">ZHASHKIVSKY KABAN™</a>
+                      <a href="#" class="info-card__label">HAISENBERG™</a>
+                      <a href="#" class="info-card__label">ZHASHKIVSKE™</a>
+                    </div>
+                  </li>
+                  <li class="info-card__item" data-tab-content="2">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">REVO™</a>
+                      <a href="#" class="info-card__label">HAISENBERG™</a>
+                      <a href="#" class="info-card__label">ZHASHKIVSKE™</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="info-list__item">
-              <div class="info-card">
+              <div class="info-card" data-tabs-parrent>
                 <div class="info-card__top">
                   <a href="#" class="info-card__title">bar</a>
                   <span class="info-card__icon">
@@ -192,17 +194,26 @@
                 </div>
 
                 <div class="info-card__wrapp">
-                  <button class="info-card__text">Українські 19 брендів</button>
-                  <button class="info-card__text">Світові 12 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="1">Українські 19 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="2">Світові 12 брендів</button>
                 </div>
 
-                <div class="info-card__labels">
-                  <a href="#" class="info-card__label">EAT ME™</a>
-                </div>
+                <ul class="info-card__content">
+                  <li class="info-card__item active" data-tab-content="1">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">EAT ME™</a>
+                    </div>
+                  </li>
+                  <li class="info-card__item" data-tab-content="2">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">HAISENBERG™</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="info-list__item">
-              <div class="info-card">
+              <div class="info-card" data-tabs-parrent>
                 <div class="info-card__top">
                   <a href="#" class="info-card__title">Alco-energy drink</a>
                   <span class="info-card__icon">
@@ -213,17 +224,27 @@
                 </div>
 
                 <div class="info-card__wrapp">
-                  <button class="info-card__text">Українські 19 брендів</button>
-                  <button class="info-card__text">Світові 12 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="1">Українські 19 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="2">Світові 12 брендів</button>
                 </div>
 
-                <div class="info-card__labels">
-                  <a href="#" class="info-card__label">REVO™</a>
-                </div>
+                <ul class="info-card__content">
+                  <li class="info-card__item active" data-tab-content="1">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">REVO™</a>
+                    </div>
+                  </li>
+                  <li class="info-card__item" data-tab-content="2">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">HAISENBERG™</a>
+                      <a href="#" class="info-card__label">REVO™</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="info-list__item">
-              <div class="info-card">
+              <div class="info-card" data-tabs-parrent>
                 <div class="info-card__top">
                   <a href="#" class="info-card__title">LOW-Alcohol cocKtail</a>
                   <span class="info-card__icon">
@@ -234,14 +255,24 @@
                 </div>
 
                 <div class="info-card__wrapp">
-                  <button class="info-card__text">Українські 19 брендів</button>
-                  <button class="info-card__text">Світові 12 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="1">Українські 19 брендів</button>
+                  <button class="info-card__text" type="button" data-tab="2">Світові 12 брендів</button>
                 </div>
 
-                <div class="info-card__labels">
-                  <a href="#" class="info-card__label">KINGS BRIDGE™</a>
-                  <a href="#" class="info-card__label">SHAKE™</a>
-                </div>
+                <ul class="info-card__content">
+                  <li class="info-card__item" data-tab-content="1">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">KINGS BRIDGE™</a>
+                      <a href="#" class="info-card__label">SHAKE™</a>
+                    </div>
+                  </li>
+                  <li class="info-card__item active" data-tab-content="2">
+                    <div class="info-card__labels">
+                      <a href="#" class="info-card__label">HAISENBERG™</a>
+                      <a href="#" class="info-card__label">ZHASHKIVSKE™</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="info-list__item">

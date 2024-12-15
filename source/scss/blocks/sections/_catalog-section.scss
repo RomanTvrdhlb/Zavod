@@ -40,20 +40,20 @@
     display: grid;
     gap: clamp(50px, 9.766vw, 100px) 20px;
 
-    @include for-mobile {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include for-tablet {
+    @media (min-width: (1151px)) {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @include tablet {
+    @media (max-width: (1150px)) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include mobile {
-      grid-template-columns: 1fr;
+    @media (max-width: (865px)) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: (385px)) {
+      row-gap: 15px;
     }
   }
 }

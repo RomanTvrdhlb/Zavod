@@ -93,7 +93,7 @@
 
     .main-link{
       &__arrow{
-        margin-top:calc(clamp(2px, .2326vw, 4px) * -1);
+        margin-top:calc(clamp(1px, .2326vw, 4px) * -1);
         width: clamp(40px, 3.0233vw, 52px);
         height: clamp(40px, 3.0233vw, 52px);
 

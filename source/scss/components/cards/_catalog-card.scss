@@ -45,7 +45,7 @@
     position: absolute;
     left: clamp(10px, 1.953vw, 20px);
     padding: 10px;
-    background-color: var(--bg-l);
+    background-color: #ffaf3e;
     border-radius: 10px;
     font-size: clamp(21px, 2.344vw, 24px);
     line-height: 100%;
@@ -59,6 +59,11 @@
 
     @include mobile{
       bottom: 10px;
+    }
+
+    @media (max-width: (500px)) {
+      font-size: clamp(14px, 3.2vw, 16px);
+      padding: 8px;
     }
   }
 
@@ -102,7 +107,7 @@
     text-decoration: underline;
     text-decoration-color: transparent;
     width: fit-content;
-
+  
     @include tablet{
         line-height: 113%;
     }
@@ -110,18 +115,26 @@
     &:hover{
       text-decoration-color: inherit;
     }
+
+    @include mobile{
+      margin-top: 2px;
+    }
   }
 
   &__details {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     min-height: 58px;
+    margin-bottom: auto;
+
+    @include for-mobile{
+      gap: 5px;
+    }
   }
 
   &__text{
     font-family: var(--font-family);
-    font-size: clamp(20px, 1.3953vw, 24px);
+    font-size: 24px;
     line-height: 112%;
     font-weight: 400;
     color: var(--cl-c);
@@ -132,6 +145,16 @@
 
     @include tablet{
       line-height: 130%;
+    }
+
+    @media (max-width: (490px)) {
+      font-size: 20px;
+    }
+
+    @include small-tablet{
+      & + .catalog-card__text{
+        margin-top: -2px;
+      }
     }
   }
 
@@ -163,6 +186,7 @@
       color: rgba(255, 255, 255, 0.5);
       position: relative;
       z-index: 1;
+      height: fit-content;
 
       b{
         font-size: 25px;
@@ -180,6 +204,10 @@
           z-index: 2;
           pointer-events: none;
       }
+    }
+
+    @include small-tablet{
+      margin-top: -1px;
     }
   }
 }

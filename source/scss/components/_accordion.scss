@@ -26,19 +26,27 @@
     }
 
     &:hover {
+      @include for-mobile{
       background-color: var(--bg-d);
 
       .accordion__btn p {
         font-weight: 500;
       }
     }
+    }
   }
 
   &__text {
     padding-top: clamp(16px, 1.3889vw, 20px);
+    font-size: clamp(22px, 1.3953vw, 24px);
 
     @include for-tablet {
       padding-right: 100px;
+    }
+
+
+    @include mobile{
+      line-height: 123%;
     }
   }
 
@@ -52,7 +60,7 @@
 
     p {
       font-family: var(--font-family);
-      font-size: clamp(20px, 2.0349vw, 35px);
+      font-size: clamp(24px, 2.0349vw, 35px);
       line-height: 106%;
       font-weight: 400;
       color: var(--cl-m);
@@ -61,6 +69,10 @@
     
       @include for-tablet {
         max-width: 850px;
+      }
+
+      @include mobile{
+        line-height: 108%;
       }
     }
 
@@ -105,12 +117,10 @@
     }
   }
 
-
   &[data-always-open]{
     .accordion{
 
       &__btn{
-        // color: var(--cl-d) !important;
         pointer-events: none;
       }
 

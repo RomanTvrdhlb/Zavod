@@ -24,10 +24,12 @@ if (dataHidden) {
           setTimeout(function () {
             box.style.overflow = "hidden";
           }, 450);
+          btn.childNodes[btn.childNodes.length - 1].textContent = " ЗГОРНУТИ";
         } else {
           box.style.maxHeight = originalHeight + "px";
           toggleCustomClass(btn, "active");
           box.style.overflow = "hidden";
+          btn.childNodes[btn.childNodes.length - 1].textContent = " РОЗГОРНУТИ";
         }
 
         box.setAttribute("data-clip-item", !isOpen);

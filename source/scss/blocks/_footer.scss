@@ -12,6 +12,10 @@
     @include for-tablet {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    @include tablet{
+      gap: 5px;
+    }
   }
 
   &__heading {
@@ -27,6 +31,23 @@
     display: flex;
     flex-direction: column;
     gap: clamp(30px, 5.859vw, 60px);
+
+    @include for-tablet{
+      .footer__pays{
+        display: none;
+      }
+    }
+
+    @include tablet{
+      .footer__nav-item:last-child{
+        padding-bottom: clamp(10px, 1.27vw, 13px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    .footer__pays{
+      margin-top: calc(clamp(30px, 5.859vw, 60px) * -1);
+    }
   }
 
   &__nav {
@@ -161,6 +182,7 @@
       position: relative;
       padding-top: 20px;
       border-top: 1px solid var(--bg-a);
+      gap: 118px;
 
       &::before {
         content: '';
@@ -186,15 +208,21 @@
     &-top {
       display: flex;
       flex-direction: column;
-      gap: clamp(30px, 4.883vw, 50px);
+      gap: clamp(40px, 4.883vw, 50px);
     }
 
     &-bot {
+      @include tablet{
+        .footer__pays{
+          display: none;
+        }
+      }
+
       @include for-mobile {
         display: grid;
         grid-template-columns: 1fr clamp(69px, 14.063vw, 144px);
         grid-template-rows: repeat(2, auto);
-        grid-gap: 30px;
+        grid-gap: 5px 30px;
       }
 
       @include mobile {
@@ -240,6 +268,15 @@
     display: flex;
     flex-direction: column;
     gap: clamp(17px, 2.93vw, 30px);
+
+    @include for-mobile {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    @include tablet{
+      gap: 42px;
+    }
   }
 
   &__facebook-link {
@@ -250,6 +287,7 @@
     color: var(--cl-a);
     text-decoration: underline;
     transition: all .3s;
+    text-underline-offset: 10px;
 
     &:hover{
       text-decoration-color: transparent;
@@ -273,7 +311,7 @@
 
     @include for-mobile {
       grid-column: 1;
-      grid-row: 2;
+      grid-row: 3;
     }
 
     p {
@@ -291,20 +329,62 @@
     }
   }
 
+  &__pays{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+
+    @include small-tablet{
+      gap: 9px;
+    }
+
+    &-icon{
+      width: 40px;
+      height: 25px;
+    
+      svg{
+        width: 100%;
+        height: 100%
+      }
+
+      @include small-tablet{
+        width: 22px;
+        height: 15px;
+      }
+
+      &--visa{
+        width: 82px;
+        height: 82px;
+
+        @include small-tablet{
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+
+    @include for-mobile{
+      margin-bottom: 40px;
+    }
+  }
+
   &__alert {
     width: fit-content;
     display: inline-flex;
     flex-direction: column;
-    gap: clamp(10px, 2.93vw, 30px);
+    gap: clamp(10px, 2.93vw, 25px);
 
     @include for-mobile {
       grid-column: 2;
-      grid-row: span 2;
+      grid-row: span 3;
+      justify-content: flex-end;
     }
 
     svg {
       width: clamp(69px, 14.063vw, 144px);
       height: clamp(61px, 12.5vw, 128px);
+      transition: all .3s;
     }
 
     p {
@@ -314,6 +394,12 @@
       text-align: center;
       text-transform: uppercase;
       color: var(--cl-a);
+    }
+
+    &:hover{
+      svg{
+        transform: scale(1.03);
+      }
     }
   }
 }
