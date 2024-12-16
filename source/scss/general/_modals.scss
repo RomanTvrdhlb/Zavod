@@ -14,6 +14,9 @@
   }
 
   .close {
+    position: absolute;
+    top: clamp(20px, 4.883vw, 50px);
+    right: clamp(20px, 4.883vw, 50px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +37,7 @@
 
   .close svg {
     pointer-events: none;
-    width: clamp(24px, 2.0833vw, 30px);
-    height: clamp(24px, 2.0833vw, 30px);
+    width: 40px;
+    height: 40px;
   }
 }

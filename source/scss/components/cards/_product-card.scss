@@ -15,7 +15,7 @@
     &__inner{
         display: flex;
         align-items: center;
- 
+
         gap: 10px;
     }
 
@@ -31,6 +31,8 @@
     }
 
     &__value{
+        display: flex;
+        align-items: center;
         font-family: var(--font-family);
         font-weight: 500;
         font-size: clamp(30px, 2.0349vw, 35px);
