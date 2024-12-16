@@ -88,13 +88,18 @@
     @include for-mobile{
       height: 25px;
       white-space: nowrap;
-  }
+    }
 
-  @include mobile{
-      height: 25px;
-      max-width: 95%;
-      white-space: normal;
-  }
+    @include mobile{
+        height: 25px;
+        max-width: 95%;
+        white-space: normal;
+    }
+
+    
+    @media (max-width: (500px)) {
+      font-size: 22px;
+    }
   }
 
   &__series{
@@ -118,6 +123,10 @@
 
     @include mobile{
       margin-top: 2px;
+    }
+
+    @media (max-width: (500px)) {
+      font-size: 22px;
     }
   }
 
@@ -173,23 +182,40 @@
       b {
         font-size: 30px;
         font-weight: 500;
+
+        @media (max-width: (500px)) {
+          font-size: 24px;
+        }
       }
 
       @include tablet{
           line-height: 104%;
       }
+
+      @media (max-width: (500px)) {
+        font-size: 30px;
+      }
     }
 
     &-sale {
       font-size: 25px;
-      line-height: 100%;
+      line-height: 80%;
       color: rgba(255, 255, 255, 0.5);
       position: relative;
       z-index: 1;
       height: fit-content;
+      display: inline-flex;
+
+      @media (max-width: (500px)) {
+        font-size: 23px;
+      }
 
       b{
         font-size: 25px;
+
+        @media (max-width: (500px)) {
+          font-size: 23px;
+        }
       }
 
       &::before{
@@ -204,10 +230,12 @@
           z-index: 2;
           pointer-events: none;
       }
+
+      @include tablet{
+        line-height: 125%;
+      }
     }
 
-    @include small-tablet{
-      margin-top: -1px;
-    }
+    
   }
 }

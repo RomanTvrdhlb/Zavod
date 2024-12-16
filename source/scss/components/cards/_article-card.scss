@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   gap: clamp(20px, 2.907vw, 50px);
   border-radius: 25px;
   background: var(--bg-d);
   padding: clamp(16px, 1.1628vw, 20px);
+  height: 100%;
 
   @include mobile{
     padding: 20px;
@@ -22,6 +22,7 @@
 
     picture,
     img {
+      border-radius: clamp(20px, 1.4535vw, 25px);
       width: 100%;
       height: 100%;
       transition: all .3s;
@@ -89,7 +90,7 @@
     gap: 10px 15px;
     height: 100%;
 
-    p {
+    p,a {
       width: 100%;
       font-size: 35px;
       font-size: 27px;

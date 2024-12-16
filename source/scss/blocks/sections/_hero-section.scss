@@ -123,6 +123,10 @@
             100% 50%
           );
         }
+
+        span:not([class]){
+          height: clamp(38px, 2.396vw, 46px);
+        }
       }
     }
 

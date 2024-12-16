@@ -6,7 +6,8 @@
   top: 0;
   padding: clamp(15px, 1.1628vw, 20px) 0;
   background: var(--bg-b);
-  transition: 0.3s;
+  transition: all 0.3s, padding-right 0s;
+
 
   &.sticky {
     padding: clamp(15px, 1.7442vw, 30px) 0;

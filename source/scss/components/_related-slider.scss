@@ -37,9 +37,19 @@
     grid-template-columns: 270px auto;
     grid-template-rows: 1fr;
 
+    @media (max-width: (1300px)) {
+      @include for-laptop{
+        grid-template-columns: 250px auto;
+      }
+    }
+
+    @include laptop{
+      @include for-tablet{
+        column-gap: 1px;
+      }
+    }
+
     @include for-tablet{
-      display: grid;
-      grid-template-columns: 270px auto;
       grid-template-rows: 1fr;
       align-items: flex-end;
     }
@@ -67,7 +77,9 @@
     }
 
     &__price-current{
-      font-size: 20px;
+      @media (min-width: (501px)) {
+        font-size: 35px;
+      }
     }
 
     @include mobile{
@@ -81,6 +93,12 @@
     margin: 0;
     background-color: transparent;
     height: clamp(180px, 21.042vw, 404px);
+
+    @include laptop{
+      @include for-tablet{
+        height: clamp(240px, 21.042vw, 404px); 
+      }
+    }
 
     @include small-tablet{
       max-height: clamp(180px, 39.583vw, 304px);
@@ -96,6 +114,12 @@
 
   .catalog-card__info {
     max-width: 320px;
+   
+    @include laptop{
+      @include for-tablet{
+        padding-right: 45px;
+      }
+    }
   }
 
   .swiper-pagination {

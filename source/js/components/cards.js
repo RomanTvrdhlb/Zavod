@@ -1,19 +1,34 @@
 import { removeClassInArray, addCustomClass } from "../functions/customFunctions";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const infoCards = document.querySelectorAll('.info-card');
+  const infoCards = document.querySelectorAll('.info-card');
 
-    infoCards && infoCards.forEach(function(card){
-        const btns = card.querySelectorAll('.info-card__text');
-
-        btns.forEach(function(btn){
-            btn.addEventListener('click', function(e){
-                e.preventDefault();
-                removeClassInArray(btns, 'active');
-                addCustomClass(btn, 'active');
-            })
-        })
-    })
+  if (infoCards) {
+    infoCards.forEach(function (card) {
+      const btns = card.querySelectorAll('.info-card__text');
+      const labels = card.querySelectorAll('.info-card__label');
+  
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          removeClassInArray(btns, 'active');
+          addCustomClass(btn, 'active');
+  
+          const filter = btn.dataset.filter;
+  
+          labels.forEach(function (label) {
+            if (filter === 'all') {
+              label.style.display = 'block';
+            } else if (label.dataset.origin === filter) {
+              label.style.display = 'block'; 
+            } else {
+              label.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  }
 
 
     const bestsellersSection = document.querySelector('.bestsellers-section');
@@ -39,3 +54,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
   
+

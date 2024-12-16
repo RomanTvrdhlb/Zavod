@@ -99,10 +99,13 @@
         border-top: solid 1px var(--br-b);
       }
 
+     
+
       .card {
         &::before {
           display: none;
         }
+
       }
     }
   }

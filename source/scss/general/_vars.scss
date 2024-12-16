@@ -16,10 +16,22 @@
   --overlay-bg: rgba(0, 0, 0, 0.5);
 
     // --------------- default JS variables ---------------
-    --header-height: 120px;
+    --header-height: 160px;
+
+    @include desktop{
+      --header-height: 134px;
+    }
+
+    @include laptop{
+      --header-height: 115px;
+    }
 
     @include tablet{
-      --header-height: 64px;
+      --header-height: 102px;
+    }
+
+    @include tablet{
+      --header-height: 82px;
     }
 
   // --------------- default font-family variables ---------------

@@ -1,2 +1,30 @@
 <div class="overlay fixed-block" data-overlay>
+    <div class="modal" data-popup="order">
+        <button class="modal__close close">
+            <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+        </button>
+        <div class="modal__top">
+            <span class="modal__title">Order details</span>
+        </div>
+
+        <div class="modal__box">
+            <span class="modal__title">Payment</span>
+
+            <div class="modal__inner">
+                <p>Connect your TON wallet to pay for your order</p>
+         
+
+              <form class="copy-form">
+                <label class="copy-form__label" for="address_2" data-parent-copy>
+                  <input readonly type="text" name="address_2" id="address_2" class="copy-form__input" value="UQB6I0y6lfUvZW...rkNkgs9k">
+                  <button class="copy-btn" data-copy>
+                   <img width='24' height='24' src='img/sprite/copy.svg' alt='image'>
+                   </button>
+                </label>
+              </form>
+            </div>
+        </div>
+    </div>
 </div>

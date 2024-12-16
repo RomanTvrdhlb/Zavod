@@ -15,6 +15,16 @@
         height: clamp(150px, 13.314vw, 229px);
       }
 
+      &__bottom{
+        a{
+          font-size: clamp(22px, 2.035vw, 35px);
+
+          @include  for-tablet{
+            max-width: clamp(300px, 36.802vw, 633px);
+          }
+        }
+      }
+
       p{
         font-size: clamp(22px, 2.035vw, 35px);
 
@@ -87,7 +97,17 @@
           &__image{
             @include  for-small-tablet{
               height: clamp(150px, 18.779vw, 323px);
-              width: clamp(260px, 48.256vw, 830px);
+              width: calc(50% - 10px);
+            }
+          }
+
+          &__bottom{
+            a{
+              font-size: clamp(22px, 3.488vw, 60px);
+
+              @include  for-tablet{
+                max-width: 100%;
+              }
             }
           }
 

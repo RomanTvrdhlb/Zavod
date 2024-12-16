@@ -33,6 +33,13 @@
       @include mobile{
         padding: clamp(20px, 1.7442vw, 30px) 10px;
       }
+
+      @media (max-width: (365px)) {
+        height: 48px;
+        font-size: 17px;
+        padding: 20px 4px;
+        width: 100%;
+      }
     }
 
     .card-list{
@@ -60,14 +67,6 @@
             }
           }
         }
-
-        // &.promo{
-        //   @include mobile{
-        //     &::before{
-        //       width: 100%;
-        //     }
-        //   }
-        // }
 
         &.info{
           @include mobile{
@@ -226,6 +225,10 @@
         font-weight: 500;
         color: var(--cl-m);
       }
+    }
+
+    @media (max-width: (380px)) {
+      padding: 10px;
     }
   }
 

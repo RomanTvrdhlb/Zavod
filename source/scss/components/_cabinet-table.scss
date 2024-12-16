@@ -33,10 +33,6 @@
             }
         }
 
-        &:first-of-type{
-            padding-top: 0;
-        }
-
         @include tablet{
             grid-template-columns: .6fr .7fr .7fr .5fr .7fr auto;
         }

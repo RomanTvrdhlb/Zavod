@@ -50,6 +50,10 @@
                 }
             }
         }
+
+        .cabinet-table{
+            margin-top: -20px;
+        }
     }
 
     &__btn{
@@ -103,5 +107,7 @@
         @include mobile{
             display: contents;
         }
+
+      
     }
 }

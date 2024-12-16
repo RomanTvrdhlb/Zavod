@@ -101,13 +101,33 @@ document.addEventListener("DOMContentLoaded", function () {
         delay: 3000,
         disableOnInteraction: false,
       },
-
       pagination: {
         el: heroSlider.querySelector(".swiper-pagination"),
         clickable: true,
-      }
+      },
+      breakpoints: {
+        320: {
+          speed: 600,
+        },
+        1024: {
+          speed: 1600,
+        },
+      },
     });
+  
+    const updateAutoplay = () => {
+      if (window.innerWidth < 1024) {
+        heroSwiper.autoplay.stop();
+      } else {
+        heroSwiper.autoplay.start();
+      }
+    };
+  
+    updateAutoplay();
+  
+    window.addEventListener("resize", updateAutoplay);
   }
+  
 
   if (articlesSlider) {
     let swiperInstance = null;

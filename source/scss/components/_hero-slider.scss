@@ -15,9 +15,9 @@
   .swiper-slide {
     position: relative;
     z-index: 1;
-    transition: opacity 1s ease-in-out;
 
     @include for-tablet {
+      transition: opacity 1s ease-in-out;
       height: clamp(300px, 50.6977vw, 872px);
     }
 
@@ -223,9 +223,9 @@
     @include for-tablet {
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: 5px;
       text-align: right;
-      width: clamp(843px, 57.8488vw, 995px);
+      width: clamp(600px, 57.8488vw, 995px);
       z-index: 10;
     }
   }
@@ -240,89 +240,17 @@
       display: inline;
       box-decoration-break: clone;
       background: var(--bg-e);
-      padding: 20px 16px;
+      padding: 15px;
       filter: url("#goo");
-      font-size: clamp(49px, 3.125vw, 60px);
+      font-size: clamp(40px, 3.125vw, 60px);
       position: relative;
       z-index: 1;
-
-      &::before {
-        position: absolute;
-        content: "";
-        background: var(--bg-e);
-        z-index: -1;
-        top: 0;
-        transform: translateY(-50%);
-        right: -39px;
-        width: 45px;
-        height: 221px;
-        pointer-events: none;
-        clip-path: polygon(
-          50% 0,
-          46% 12%,
-          40% 23%,
-          32% 33%,
-          23% 40%,
-          12% 46%,
-          0 50%,
-          0 100%,
-          100% 100%,
-          100% 0
-        );
-
-        @include for-laptop{
-          right: -8px;
-        }
-      }
 
       span {
         position: relative;
         z-index: 1;
-        padding-left: 50px;
         line-height: 100%;
-
-        i {
-          width: 100px;
-          display: inline-flex;
-          height: 10px;
-        }
-
-        &:last-of-type {
-          @include for-laptop{
-            display: inline-block;
-            width: 100%;
-            padding-right: 31px;
-
-            i{
-            width: 150px;
-            }
-          }
-        
-          &::after {
-            position: absolute;
-            content: "";
-            background: var(--bg-e);
-            z-index: -1;
-            bottom: 0;
-            transform: translateY(100%);
-            left: -62px;
-            width: 45px;
-            height: 45px;
-            pointer-events: none;
-            clip-path: polygon(
-              50% 0,
-              46% 12%,
-              40% 23%,
-              32% 33%,
-              23% 40%,
-              12% 46%,
-              0 50%,
-              0 100%,
-              100% 100%,
-              100% 0
-            );
-          }
-        }
+        text-transform: uppercase;
       }
     }
 

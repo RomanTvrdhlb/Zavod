@@ -21,6 +21,7 @@ function stickyHeaderFunction(breakpoint){
             }
 
             lastScroll = scrollPosition();
+           
         })
     }
 }

@@ -267,9 +267,9 @@
       height: 40px;
       line-height: 100%;
       white-space: nowrap;
+      padding: 0 5px;
 
       &:hover{
-        padding-left: 5px;
         background: var(--cl-b);
         color: var(--cl-a);
       }

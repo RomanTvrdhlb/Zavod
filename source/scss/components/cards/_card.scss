@@ -247,13 +247,13 @@
   }
 
   &--order {
-    grid-template-columns: auto 0.73fr 0.4fr 195px 0.1fr;
+    grid-template-columns: clamp(100px, 7.2674vw, 125px) 0.73fr minmax(115px,0.55fr) 195px 0.1fr;
     padding-right: 30px;
     position: relative;
     z-index: 1;
 
     @include laptop {
-      grid-template-columns: auto 0.73fr 0.4fr 150px 0.1fr;
+      grid-template-columns: auto 0.73fr minmax(110px,0.4fr) 150px 0.1fr;
     }
 
     @include small-tablet {
@@ -263,6 +263,10 @@
 
     @include mobile {
       padding-right: 0;
+    }
+
+    @media (max-width: (385px)) {
+      gap: 1px 10px;
     }
 
     .product-btns {
@@ -293,6 +297,25 @@
       }
     }
 
+    &.mode{
+      .product-btns{
+        @include for-mobile{
+          margin-bottom: 3px;
+        }
+      }
+
+      .card{
+        
+        &__btn{
+          margin-bottom: 0;
+        }
+
+        &__inner{
+          padding-bottom: 0;
+        }
+      }
+    }
+
     .card {
       &__btn {
         @include small-tablet {
@@ -320,6 +343,10 @@
           grid-row: 3;
           grid-column: 2/3;
         }
+
+        @media (max-width: (365px)) {
+          grid-column: 2/4;
+        }
       }
 
       &__pretitle {
@@ -333,6 +360,10 @@
         @include small-tablet {
           grid-row: span 6;
         }
+
+        @media (max-width: (365px)) {
+          width: 80px;
+        }
       }
 
       &__inner {
@@ -341,6 +372,10 @@
           grid-column: 2/4;
           width: fit-content;
           margin-top: 4px;
+        }
+
+        @media (max-width: (325px)) {
+         gap: 1px 10px;
         }
       }
 
@@ -372,6 +407,7 @@
           font-style: normal;
           font-weight: 500;
           font-size: clamp(17px, 2.0349vw, 35px);
+          margin-left: clamp(4px, .6349vw, 8px);
         }
 
         &.old {
@@ -403,6 +439,10 @@
           i,
           b {
             font-size: clamp(17px, 1.1628vw, 20px);
+
+            @include for-mobile{
+              margin-left: 0;
+            }
           }
 
           @include small-tablet{

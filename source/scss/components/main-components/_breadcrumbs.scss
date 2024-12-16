@@ -26,6 +26,7 @@
 
       &:last-child{
         display: flex;
+        max-width: 100%;
         p{
           display: inline-block;
           text-overflow: ellipsis;

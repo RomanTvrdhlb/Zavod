@@ -22,14 +22,23 @@
   }
 
   &__tag {
-    padding: 10px clamp(10px, 1.465vw, 15px);
-    background-color: var(--bg-a);
-    border-radius: 8px;
+   
     font-size: clamp(20px, 2.441vw, 25px);
     line-height: 100%;
     font-weight: 400;
     white-space: nowrap;
-    transition: all 0.3s;
+
+    a{
+      border-radius: 8px;
+      background-color: var(--bg-a);
+      padding: 10px clamp(10px, 1.465vw, 15px);
+      transition: all 0.3s;
+
+      &:hover{
+        color: var(--bg-a);
+        background-color: var(--bg-b);
+      }
+    }
   }
 
   &__pubtime {

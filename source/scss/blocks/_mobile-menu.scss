@@ -60,6 +60,55 @@
     }
   }
 
+  .search-wrapper{
+    gap: 12.5px;
+    width: 100%;
+    padding: 30px clamp(20px, 1.7442vw, 30px);
+    background: var(--bg-b);
+    border: 1px solid var(--br-a);
+    &::before{
+      display: none;
+    }
+
+    &__title{
+      color: var(--cl-a);
+    }
+
+    &__pretitle{
+      color: var(--cl-a);
+    }
+
+    &__price{
+      color: var(--cl-a);
+    }
+
+    &__link{
+      color: var(--cl-a);
+
+      &:hover{
+        svg{
+          color: var(--bg-g);
+        }
+      }
+    }
+
+    @include for-small-tablet{
+      display: none;
+      position: relative;
+      top: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include small-tablet{
+      height: fit-content;
+      transform: none;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   .header__search{
     display: flex;
     flex-direction: column;
@@ -123,49 +172,11 @@
     }
 
     .search-wrapper{
-      gap: 12.5px;
-      width: 100%;
-      padding: 30px clamp(20px, 1.7442vw, 30px);
-      background: var(--bg-b);
-      border: 1px solid var(--br-a);
-
-      &::before{
-        display: none;
-      }
-
-      &__title{
-        color: var(--cl-a);
-      }
-
-      &__pretitle{
-        color: var(--cl-a);
-      }
-
-      &__price{
-        color: var(--cl-a);
-      }
-
-      &__link{
-        color: var(--cl-a);
-
-        &:hover{
-          svg{
-            color: var(--bg-g);
-          }
-        }
-      }
-
       @include for-small-tablet{
-        position: relative;
-        top: 0;
-        opacity: 1;
-        visibility: visible;
+        display: flex;
       }
-
       @include small-tablet{
-        top: 100%;
-        overflow-y: auto;
-        height: calc(100dvh - var(--header-height) - clamp(20px, 2.0349vw, 35px) - clamp(51px, 4.7093vw, 81px) - 30px);
+        display: none;
       }
     }
 
